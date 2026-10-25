@@ -1,0 +1,182 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Pagliaroom — a stone hut in Sicily, reborn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#efe9de;--ink:#1c1a16;--mut:#6d675b;--card:#f7f3ea;--line:#d8d0bf;--sage:#a9c7b0;--amber:#e9a23b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14130f;--ink:#f1ebdf;--mut:#a39c8d;--card:#1d1b16;--line:#35322a}}
+:root[data-theme="dark"]{--bg:#14130f;--ink:#f1ebdf;--mut:#a39c8d;--card:#1d1b16;--line:#35322a}
+html{scroll-behavior:smooth;scroll-padding-top:70px;color-scheme:light dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 'Inter Tight',system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;line-height:.98;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(3rem,9vw,8rem)}h2{font-size:clamp(2.3rem,5.5vw,4.6rem)}
+em{font-style:italic;color:var(--amber)}
+.w{max-width:1200px;margin:0 auto;padding:0 22px}
+section{padding:110px 0}
+.tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:18px}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:400 1.7rem 'Instrument Serif',serif;text-decoration:none;color:var(--ink)}.logo i{color:var(--amber)}
+nav a.l{margin-left:24px;color:var(--ink);text-decoration:none;font-size:14px}
+nav a.l:hover{color:var(--amber)}
+.btn{display:inline-flex;gap:10px;align-items:center;background:var(--ink);color:var(--bg);border:0;border-radius:99px;padding:14px 26px;font:500 15px 'Inter Tight',sans-serif;cursor:pointer;text-decoration:none;transition:.25s}
+.btn:hover{background:var(--amber);color:#1c1a16;transform:translateY(-2px)}
+.btn.o{background:none;color:var(--ink);border:1px solid var(--ink)}
+@media(max-width:760px){nav a.l{display:none}}
+.hero{padding-top:130px;padding-bottom:60px}
+.hero .g{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:end}
+.hero p{max-width:440px;color:var(--mut);margin:26px 0}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.sl{position:relative;aspect-ratio:3/4;border-radius:200px 200px 18px 18px;overflow:hidden;touch-action:pan-y;cursor:ew-resize;--p:50%;user-select:none;box-shadow:0 30px 60px -30px #0007}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sl .bf{clip-path:inset(0 calc(100% - var(--p)) 0 0);filter:grayscale(.6) contrast(.95)}
+.sl .bar{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:#fff;transform:translateX(-1px)}
+.sl .bar b{position:absolute;top:60%;left:50%;width:46px;height:46px;border-radius:50%;background:#fff;color:#1c1a16;transform:translate(-50%,-50%);display:grid;place-items:center;font-size:15px;box-shadow:0 4px 18px #0006}
+.sl span{position:absolute;bottom:16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:#0009;padding:5px 12px;border-radius:99px}
+.sl .a{right:16px}.sl .b{left:16px}
+.hint{font-size:12px;color:var(--mut);margin-top:12px;text-align:center}
+@media(max-width:860px){.hero .g{grid-template-columns:1fr}.sl{max-width:420px}}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;white-space:nowrap}
+.mq div{display:inline-block;animation:m 28s linear infinite;font:400 2.2rem 'Instrument Serif',serif}
+.mq span{margin:0 26px}.mq i{color:var(--sage);font-style:normal}
+@keyframes m{to{transform:translateX(-50%)}}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story p{color:var(--mut)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.facts b{font:400 2.4rem 'Instrument Serif',serif;display:block;line-height:1}
+.facts small{color:var(--mut);font-size:13px}
+.story img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.tg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px}
+.tg button{border:0;background:none;color:var(--ink);padding:10px 22px;border-radius:99px;font:500 14px 'Inter Tight',sans-serif;cursor:pointer}
+.tg button.on{background:var(--ink);color:var(--bg)}
+.pairs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pr{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;cursor:pointer;background:var(--card)}
+.pr:nth-child(even){margin-top:40px}
+.pr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s,transform 1.2s}
+.pr .n{opacity:0}.pr .t{filter:grayscale(.7)}
+.pairs.now .n{opacity:1}.pairs.now .t{opacity:0}
+.pr:hover img{transform:scale(1.05)}
+.pr em{position:absolute;left:12px;bottom:10px;color:#fff;font:italic 1.3rem 'Instrument Serif',serif;text-shadow:0 1px 8px #000a}
+@media(max-width:860px){.pairs{grid-template-columns:1fr 1fr}.pr:nth-child(even){margin-top:0}}
+.mos{columns:3;column-gap:14px}
+.mos figure{margin:0 0 14px;position:relative;border-radius:16px;overflow:hidden;break-inside:avoid}
+.mos img{width:100%;transition:transform 1s}.mos figure:hover img{transform:scale(1.05)}
+.mos figcaption{position:absolute;left:12px;bottom:12px;background:#000a;color:#fff;font-size:12px;padding:5px 12px;border-radius:99px;opacity:0;transform:translateY(8px);transition:.3s}
+.mos figure:hover figcaption{opacity:1;transform:none}
+@media(max-width:860px){.mos{columns:2}.mos figcaption{opacity:1;transform:none}}
+.feat{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.feat span{border:1px solid var(--line);background:var(--card);padding:9px 18px;border-radius:99px;font-size:14px}
+.feat span:nth-child(3n){background:var(--sage);color:#1c1a16;border-color:var(--sage)}
+.plan{background:var(--ink);color:var(--bg);border-radius:28px;padding:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
+.plan .tag{color:#a39c8d}
+.plan p{color:#b9b2a3}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .f{grid-column:1/-1}
+label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#a39c8d;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;background:#ffffff12;border:1px solid #ffffff2a;color:#f1ebdf;border-radius:12px;padding:13px 14px;font:inherit;font-size:16px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--amber);border-color:transparent}
+option{color:#000}
+.ch{display:flex;gap:8px}.ch label{margin:0;flex:1;text-transform:none;letter-spacing:0;font-size:15px}
+.ch input{display:none}.ch span{display:block;text-align:center;padding:12px;border:1px solid #ffffff2a;border-radius:12px;color:#f1ebdf;cursor:pointer;transition:.2s}
+.ch input:checked+span{background:var(--amber);color:#1c1a16;border-color:var(--amber)}
+.sum{font:italic 1.5rem 'Instrument Serif',serif;color:var(--sage);min-height:2em}
+.plan .btn{background:var(--amber);color:#1c1a16}.plan .btn:hover{background:#fff}
+@media(max-width:860px){.plan{grid-template-columns:1fr;padding:30px 22px}form{grid-template-columns:1fr}}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{cursor:pointer;font:400 1.7rem 'Instrument Serif',serif;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--amber);transition:.3s}details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mut);max-width:620px;margin:12px 0 0}
+footer{padding:60px 0 40px;text-align:center;border-top:1px solid var(--line)}
+footer .big{font:400 clamp(3rem,14vw,11rem) 'Instrument Serif',serif;line-height:.9;color:var(--sage)}
+footer small{color:var(--mut)}
+.rv{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.mq div{animation:none}}
+</style></head><body>
+<nav><div class="w"><a class="logo" href="#top">pagliaroom<i>.</i></a><div><a class="l" href="#story">Story</a><a class="l" href="#then">Then &amp; Now</a><a class="l" href="#space">The space</a><a class="l" href="#stay">FAQ</a><a class="btn" style="padding:9px 20px;margin-left:24px" href="#plan">Plan a stay</a></div></div></nav>
+
+<header class="hero" id="top"><div class="w g">
+<div class="rv"><span class="tag">Sicily · Stone · Light</span>
+<h1>A humble hut,<br><em>reborn</em> as a<br>place to stay.</h1>
+<p>Once a rough stone store tucked in a village alley, now a small, warm retreat of bare walls, timber beams and one very green staircase.</p>
+<div class="cta"><a class="btn" href="#plan">Plan your stay →</a><a class="btn o" href="#then">See the transformation</a></div></div>
+<div class="rv"><div class="sl" id="sl"><img data-i="a9" alt="After: the renovated doorway"><img class="bf" data-i="b3" alt="Before: the old doorway"><div class="bar"><b>⇄</b></div><span class="b">Before</span><span class="a">After</span></div><div class="hint">Drag to reveal ↔</div></div>
+</div></header>
+
+<div class="mq"><div id="mq"></div></div>
+
+<section id="story"><div class="w story">
+<div class="rv"><span class="tag">The story</span><h2>Same stones.<br><em>New life.</em></h2>
+<p style="margin-top:24px">A pagliarola is a traditional rural stone shelter, built to last and never meant to impress. We kept what made it special—the hand-laid walls, the arched doorway, the timber above—and added only what a stay needs: a kitchen, a loft bed, a quiet bathroom and warm light.</p>
+<div class="facts"><div><b data-n="100">0</b><small>% original stone character kept</small></div><div><b data-n="2">0</b><small>levels, linked by a spiral stair</small></div><div><b data-n="1">0</b><small>door, number 10, still arched</small></div></div></div>
+<div class="rv"><img data-i="a14" alt="Cosy lounge corner with stone wall"></div></div></section>
+
+<section id="then" style="padding-top:40px"><div class="w">
+<div class="head rv"><div><span class="tag">Then &amp; now</span><h2>Watch it <em>change.</em></h2></div>
+<div class="tg" id="tg"><button class="on" data-m="then">Then</button><button data-m="now">Now</button></div></div>
+<div class="pairs rv" id="pairs">
+<div class="pr"><img class="t" data-i="b1" alt=""><img class="n" data-i="a7" alt=""><em>The façade</em></div>
+<div class="pr"><img class="t" data-i="b6" alt=""><img class="n" data-i="a9" alt=""><em>The door</em></div>
+<div class="pr"><img class="t" data-i="b4" alt=""><img class="n" data-i="a16" alt=""><em>The walls</em></div>
+<div class="pr"><img class="t" data-i="b5" alt=""><img class="n" data-i="a15" alt=""><em>The ceiling</em></div>
+</div><p class="hint">Tap a card or use the switch.</p></div></section>
+
+<section id="space" style="padding-top:40px"><div class="w">
+<div class="head rv"><div><span class="tag">The space</span><h2>Small on paper.<br><em>Generous in feel.</em></h2></div></div>
+<div class="mos rv" id="mos"></div>
+<div class="feat rv"><span>Exposed stone walls</span><span>Timber beam ceiling</span><span>Open kitchen with island</span><span>Mezzanine bedroom</span><span>Sage-green spiral stair</span><span>Walk-in rain shower</span><span>Cosy sofa nook</span><span>Warm, layered lighting</span></div>
+</div></section>
+
+<section id="plan" style="padding-top:20px"><div class="w"><div class="plan rv">
+<div><span class="tag">Plan a stay</span><h2 style="color:#f1ebdf">Come and <em>sleep in a story.</em></h2>
+<p style="margin-top:20px">Tell us when and who’s coming, or just ask a question. We’ll reply personally.</p><div class="sum" id="sum">Pick your dates ✦</div></div>
+<form id="f"><div class="f ch"><label><input type="radio" name="k" value="Booking request" checked><span>Plan a stay</span></label><label><input type="radio" name="k" value="Information request"><span>Ask for info</span></label></div>
+<div><label for="in">Arrival</label><input type="date" id="in"></div><div><label for="out">Departure</label><input type="date" id="out"></div>
+<div><label for="g">Guests</label><select id="g"><option>1</option><option selected>2</option><option>3</option><option>4+</option></select></div>
+<div><label for="nm">Your name</label><input id="nm" placeholder="Name" autocomplete="name"></div>
+<div class="f"><label for="em">Email</label><input id="em" type="email" placeholder="you@email.com" autocomplete="email"></div>
+<div class="f"><label for="ms">Message</label><textarea id="ms" rows="3" placeholder="Anything we should know?"></textarea></div>
+<div class="f"><button class="btn" type="submit">Send request →</button></div></form></div></div></section>
+
+<section id="stay" style="padding-top:20px"><div class="w" style="max-width:860px"><div class="head rv"><h2>Good to <em>know.</em></h2></div>
+<div class="rv"><details open><summary>What is a pagliarola?</summary><p>A traditional stone outbuilding of rural Sicily, historically used to store hay, tools and produce. Ours has been carefully restored as a stay.</p></details>
+<details><summary>How many people can stay?</summary><p>The loft bed and the sofa nook suit couples and small groups. Tell us your group size in the form and we’ll confirm the best setup.</p></details>
+<details><summary>Is there a kitchen?</summary><p>Yes—a full open kitchen with an island, induction hob, oven and sink, set against the stone wall.</p></details>
+<details><summary>How do I book?</summary><p>Send the form above. It opens an email to us with your dates and details, and we’ll answer with availability and rates.</p></details></div></div></section>
+
+<footer><div class="w"><div class="big">pagliaroom</div><p><small>Sicily · Stone · Light — © 2026 Pagliaroom</small></p></div></footer>
+
+<script>
+const I={"b1": "assets/b1.jpg", "b2": "assets/b2.jpg", "b3": "assets/b3.jpg", "b4": "assets/b4.jpg", "b5": "assets/b5.jpg", "b6": "assets/b6.jpg", "a7": "assets/a7.jpg", "a8": "assets/a8.jpg", "a9": "assets/a9.jpg", "a10": "assets/a10.jpg", "a11": "assets/a11.jpg", "a12": "assets/a12.jpg", "a13": "assets/a13.jpg", "a14": "assets/a14.jpg", "a15": "assets/a15.jpg", "a16": "assets/a16.jpg", "a17": "assets/a17.jpg", "a18": "assets/a18.jpg", "a19": "assets/a19.jpg"};
+document.querySelectorAll('img[data-i]').forEach(e=>e.src=I[e.dataset.i]);
+const $=s=>document.querySelector(s);
+$('#mq').innerHTML=('<span>Stone</span><i>✺</i><span>Timber</span><i>✺</i><span>Light</span><i>✺</i><span>Sicily</span><i>✺</i>').repeat(8);
+const mos=[['a10','Kitchen island'],['a12','Spiral stair'],['a16','Open living'],['a11','Stone &amp; oak'],['a18','Bathroom'],['a17','Loft &amp; sliding door'],['a19','The details'],['a8','Evening arrival'],['a13','From above']];
+$('#mos').innerHTML=mos.map(m=>`<figure><img src="${I[m[0]]}" alt="${m[1]}"><figcaption>${m[1]}</figcaption></figure>`).join('');
+// slider
+const sl=$('#sl');let dr=false;
+const mv=x=>{const r=sl.getBoundingClientRect();sl.style.setProperty('--p',Math.max(0,Math.min(100,(x-r.left)/r.width*100))+'%')};
+sl.addEventListener('pointerdown',e=>{dr=true;sl.setPointerCapture(e.pointerId);mv(e.clientX)});
+sl.addEventListener('pointermove',e=>{if(dr||e.pointerType==='mouse')mv(e.clientX)});
+sl.addEventListener('pointerup',()=>dr=false);
+let t=0;const demo=setInterval(()=>{t+=.04;if(t>6.3||dr){clearInterval(demo);return}sl.style.setProperty('--p',50+30*Math.sin(t)+'%')},30);
+// then/now
+const pairs=$('#pairs'),tg=$('#tg');
+const setM=m=>{pairs.classList.toggle('now',m==='now');tg.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.m===m))};
+tg.onclick=e=>e.target.dataset.m&&setM(e.target.dataset.m);
+pairs.querySelectorAll('.pr').forEach(p=>p.onclick=()=>{p.querySelector('.n').style.opacity=p.querySelector('.n').style.opacity==='1'?'0':'1';p.querySelector('.t').style.opacity=p.querySelector('.n').style.opacity==='1'?'0':'1'});
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n;let v=0;const s=setInterval(()=>{v=Math.min(n,v+Math.ceil(n/40));c.textContent=v;if(v>=n)clearInterval(s)},30)});io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+// form
+const a=$('#in'),b=$('#out'),sum=$('#sum'),today=new Date().toISOString().slice(0,10);a.min=b.min=today;
+const nights=()=>a.value&&b.value?Math.round((new Date(b.value)-new Date(a.value))/864e5):0;
+const upd=()=>{if(a.value&&b.value<=a.value)b.value='';const n=nights();sum.textContent=n>0?`${n} night${n>1?'s':''} under the beams ✦`:'Pick your dates ✦'};
+a.onchange=()=>{if(a.value)b.min=a.value;upd()};b.onchange=upd;
+$('#f').onsubmit=e=>{e.preventDefault();const k=document.querySelector('[name=k]:checked').value,n=nights();
+const body=`${k}\n\nName: ${$('#nm').value}\nEmail: ${$('#em').value}\nArrival: ${a.value||'-'}\nDeparture: ${b.value||'-'}${n>0?' ('+n+' nights)':''}\nGuests: ${$('#g').value}\n\n${$('#ms').value}`;
+location.href=`mailto:hello@pagliaroom.com?subject=${encodeURIComponent('Pagliaroom — '+k)}&body=${encodeURIComponent(body)}`};
+</script></body></html>
