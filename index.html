@@ -71,7 +71,7 @@ nav a.l:hover{color:var(--amber)}
 .feat{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .feat span{border:1px solid var(--line);background:var(--card);padding:9px 18px;border-radius:99px;font-size:14px}
 .feat span:nth-child(3n){background:var(--sage);color:#1c1a16;border-color:var(--sage)}
-.plan{background:var(--ink);color:var(--bg);border-radius:28px;padding:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
+.plan{background:#1c1a16;color:#f1ebdf;border:1px solid #35322a;border-radius:28px;padding:56px;display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
 .plan .tag{color:#a39c8d}
 .plan p{color:#b9b2a3}
 form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -138,8 +138,13 @@ dl.sc dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(
 .pd{align-self:flex-start;background:var(--sage);color:#1c1a16;border-radius:99px;padding:3px 12px;font-size:12px}
 .pc a{color:var(--ink);font-size:14px;text-decoration:none;border-bottom:1px solid var(--amber);align-self:flex-start}
 @media(max-width:860px){.places{grid-template-columns:1fr 1fr}}@media(max-width:560px){.places{grid-template-columns:1fr}}
+.plan h2,.plan .sum{color:#f1ebdf}.plan h2 em{color:var(--amber)}.plan .sum{color:#a9c7b0}
+.plan p{color:#c9c2b3}.plan label{color:#b5ad9d}
+.plan input,.plan select,.plan textarea{color-scheme:dark;color:#f1ebdf;background:#ffffff14}
+.plan ::placeholder{color:#8f887a;opacity:1}
+.plan .mail{font-size:14px;margin-top:18px}.plan .mail a{color:var(--amber)}
 </style></head><body>
-<nav><div class="w"><a class="logo" href="#top">pagliaroom<i>.</i></a><div><a class="l" href="#story">Story</a><a class="l" href="#then">Then &amp; Now</a><a class="l" href="#space">The space</a><a class="l" href="#explore">3D tour</a><a class="l" href="#around">Nearby</a><a class="l" href="#stay">FAQ</a><a class="btn" style="padding:9px 20px;margin-left:24px" href="#plan">Plan a stay</a></div></div></nav>
+<nav><div class="w"><a class="logo" href="#top">pagliaroom<i>.</i></a><div><a class="l" href="#story">Story</a><a class="l" href="#then">Then &amp; Now</a><a class="l" href="#explore">3D tour</a><a class="l" href="#space">The space</a><a class="l" href="#around">Nearby</a><a class="l" href="#stay">FAQ</a><a class="btn" style="padding:9px 20px;margin-left:24px" href="#plan">Plan a stay</a></div></div></nav>
 
 <header class="hero" id="top"><div class="w g">
 <div class="rv"><span class="tag">Sicily · Stone · Light</span>
@@ -151,21 +156,11 @@ dl.sc dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(
 
 <div class="mq"><div id="mq"></div></div>
 
-<section id="story"><div class="w">
-<div class="storyhead"><div class="rv"><span class="tag">The story</span><h2>Same stones.<br><em>New life.</em></h2></div>
-<div class="rv"><p>A pagliarola is a traditional rural stone shelter, built to last and never meant to impress. We kept what made it special—the hand-laid walls, the arched doorway, the timber above—and added only what a stay needs: a kitchen, a loft bed, a quiet bathroom and warm light.</p>
-<div class="facts"><div><b data-n="100">0</b><small>% original stone character kept</small></div><div><b data-n="2">0</b><small>levels, linked by a spiral stair</small></div><div><b data-n="1">0</b><small>door, number 10, still arched</small></div></div></div></div>
-<div class="model rv" id="explore">
-<div class="toolbar">
-<div class="grp"><span class="lab">View</span><button id="cv-street" data-cam="street">Street</button><button id="cv-cut" data-cam="cut">Cutaway</button><button id="cv-in" data-cam="inside">Living room</button><button id="cv-loft" data-cam="loft">Loft</button></div>
-<div class="grp"><span class="lab">Show</span><button id="t-roof" aria-pressed="true">Roof</button><button id="t-front" aria-pressed="true">Street wall</button><button id="t-ctx" aria-pressed="true">Neighbours</button></div>
-<div class="grp"><span class="lab">Light</span><button id="t-day" aria-pressed="true">Day</button><button id="t-eve" aria-pressed="false">Evening</button><button id="t-snd" aria-pressed="false">Ambient</button></div>
-<div class="grp"><label class="lab" for="cut">Cut height</label><input id="cut" type="range" min="0.8" max="7" step="0.05" value="7"><output id="cutv" for="cut">none</output></div>
-</div>
-<div id="stage"><div class="sthint">Drag to orbit · scroll or pinch to zoom · right-drag to pan</div></div>
-</div>
-
-<p class="hint">Built from the surveyed plans: 5.12 × 5.10 m interior, roof from +5.40 m to +4.15 m. Swallows pass by in the street view by day, and Ambient adds birdsong or crickets.</p></div></section>
+<section id="story"><div class="w story">
+<div class="rv"><img data-i="a14" alt="Cosy lounge corner with stone wall"></div>
+<div class="rv"><span class="tag">The story</span><h2>Same stones.<br><em>New life.</em></h2>
+<p style="margin-top:24px">A pagliarola is a traditional rural stone shelter, built to last and never meant to impress. We kept what made it special—the hand-laid walls, the arched doorway, the timber above—and added only what a stay needs: a kitchen, a loft bed, a quiet bathroom and warm light.</p>
+<div class="facts"><div><b data-n="100">0</b><small>% original stone character kept</small></div><div><b data-n="2">0</b><small>levels, linked by a spiral stair</small></div><div><b data-n="1">0</b><small>door, number 10, still arched</small></div></div></div></div></section>
 
 <section id="then" style="padding-top:40px"><div class="w">
 <div class="head rv"><div><span class="tag">Then &amp; now</span><h2>Watch it <em>change.</em></h2></div>
@@ -176,6 +171,21 @@ dl.sc dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(
 <div class="pr"><img class="t" data-i="b4" alt=""><img class="n" data-i="a16" alt=""><em>The walls</em></div>
 <div class="pr"><img class="t" data-i="b5" alt=""><img class="n" data-i="a15" alt=""><em>The ceiling</em></div>
 </div><p class="hint">Tap a card or use the switch.</p></div></section>
+
+<section id="explore" style="padding-top:40px"><div class="w">
+<div class="head rv"><div><span class="tag">3D tour</span><h2>Step <em>inside.</em></h2></div></div>
+<div class="model rv">
+<div class="toolbar">
+<div class="grp"><span class="lab">View</span><button id="cv-street" data-cam="street">Street</button><button id="cv-cut" data-cam="cut">Cutaway</button><button id="cv-in" data-cam="inside">Living room</button><button id="cv-loft" data-cam="loft">Loft</button></div>
+<div class="grp"><span class="lab">Show</span><button id="t-roof" aria-pressed="true">Roof</button><button id="t-front" aria-pressed="true">Street wall</button><button id="t-ctx" aria-pressed="true">Neighbours</button></div>
+<div class="grp"><span class="lab">Light</span><button id="t-day" aria-pressed="true">Day</button><button id="t-eve" aria-pressed="false">Evening</button><button id="t-snd" aria-pressed="false">Ambient</button></div>
+<div class="grp"><label class="lab" for="cut">Cut height</label><input id="cut" type="range" min="0.8" max="7" step="0.05" value="7"><output id="cutv" for="cut">none</output></div>
+</div>
+<div id="stage"><div class="sthint">Drag to orbit · scroll or pinch to zoom · right-drag to pan</div></div>
+</div>
+
+
+<p class="hint">Built from the surveyed plans: 5.12 × 5.10 m interior, roof from +5.40 m to +4.15 m. Swallows pass by in the street view by day, and Ambient adds birdsong or crickets.</p></div></section>
 
 <section id="space" style="padding-top:40px"><div class="w">
 <div class="head rv"><div><span class="tag">The space</span><h2>Small on paper.<br><em>Generous in feel.</em></h2></div></div>
@@ -203,7 +213,7 @@ dl.sc dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(
 
 <section id="plan" style="padding-top:20px"><div class="w"><div class="plan rv">
 <div><span class="tag">Plan a stay</span><h2 style="color:#f1ebdf">Come and <em>sleep in a story.</em></h2>
-<p style="margin-top:20px">Tell us when and who’s coming, or just ask a question. We’ll reply personally.</p><div class="sum" id="sum">Pick your dates ✦</div></div>
+<p style="margin-top:20px">Tell us when and who’s coming, or just ask a question. Your request goes to info@pagliaroom.com and we’ll reply personally.</p><div class="sum" id="sum">Pick your dates ✦</div><p class="mail">Prefer email? Write to <a href="mailto:info@pagliaroom.com">info@pagliaroom.com</a></p></div>
 <form id="f"><div class="f ch"><label><input type="radio" name="k" value="Booking request" checked><span>Plan a stay</span></label><label><input type="radio" name="k" value="Information request"><span>Ask for info</span></label></div>
 <div><label for="in">Arrival</label><input type="date" id="in"></div><div><label for="out">Departure</label><input type="date" id="out"></div>
 <div><label for="g">Guests</label><select id="g"><option>1</option><option selected>2</option><option>3</option><option>4+</option></select></div>
@@ -251,7 +261,7 @@ const upd=()=>{if(a.value&&b.value<=a.value)b.value='';const n=nights();sum.text
 a.onchange=()=>{if(a.value)b.min=a.value;upd()};b.onchange=upd;
 $('#f').onsubmit=e=>{e.preventDefault();const k=document.querySelector('[name=k]:checked').value,n=nights();
 const body=`${k}\n\nName: ${$('#nm').value}\nEmail: ${$('#em').value}\nArrival: ${a.value||'-'}\nDeparture: ${b.value||'-'}${n>0?' ('+n+' nights)':''}\nGuests: ${$('#g').value}\n\n${$('#ms').value}`;
-location.href=`mailto:hello@pagliaroom.com?subject=${encodeURIComponent('Pagliaroom — '+k)}&body=${encodeURIComponent(body)}`};
+location.href=`mailto:info@pagliaroom.com?subject=${encodeURIComponent('Pagliaroom — '+k)}&body=${encodeURIComponent(body)}`};
 (function(){
 /* ============ shared geometry (metres) ============ */
 const W=5.12, D=5.10, T=0.62;
