@@ -484,7 +484,7 @@ function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15
 const AREAS=[
  {id:"terrace",name_it:"Esterno",k_it:"Strada",d_it:"La facciata in pietra con la porta ad arco e le persiane. Accanto alla porta, un tavolino da bistrot, due sedie e fioriere con erbe aromatiche.",name:"Outside",k:"Street",d:"The stone facade with its arched door and shutters. A bistro table, two chairs and herb planters sit by the door.",photos:["facade_day","terrace_table","door_day","facade_dusk","facade_night","door_night"],pin:[1.0,1.15,6.45],p:[2.2,2.8,11.6],t:[2.4,2.05,4.6],roof:true,front:true,nb:true,cut:100},
  {id:"living",name_it:"Soggiorno",k_it:"Piano terra",d_it:"Un divano angolare in velluto a coste contro il muro in pietra originale, un tavolino basso in marmo e la porta scorrevole del bagno.",name:"Living",k:"Ground floor",d:"A corduroy corner sofa against the original stone wall, a low marble table, and the barn door to the bathroom.",photos:["sofa","barn_door","living_stair"],pin:[0.5,1.05,1.5],p:[3.6,1.65,3.4],t:[0.4,0.9,1.0],roof:true,front:true,nb:false,cut:100},
- {id:"kitchen",name_it:"Cucina",k_it:"Piano terra",d_it:"Mobili in rovere con piano di lavoro bianco e rubinetto nero, una mensola a giorno e un'isola che fa anche da tavolo per due.",name:"Kitchen",k:"Ground floor",d:"Oak cabinets with a white worktop and black tap, an open shelf, and an island that doubles as a table for two.",photos:["kitchen","living_stair"],pin:[4.8,1.3,1.0],p:[2.5,2.05,4.75],t:[4.7,1.05,0.8],roof:true,front:true,nb:false,cut:100},
+ {id:"kitchen",name_it:"Cucina",k_it:"Piano terra",d_it:"Mobili in rovere con piano di lavoro bianco e rubinetto nero, una mensola a giorno e un'isola che fa anche da tavolo per due.",name:"Kitchen",k:"Ground floor",d:"Oak cabinets with a white worktop and black tap, an open shelf, and an island that doubles as a table for two.",photos:["kitchen","living_stair"],pin:[4.8,1.3,1.0],p:[1.55,1.75,1.3],t:[4.9,1.0,1.05],roof:true,front:true,nb:false,cut:100},
  {id:"stair",name_it:"Scala e lucernario",k_it:"Doppia altezza",d_it:"Una scala a chiocciola verde menta sale nell'ambiente a doppia altezza fino al soppalco. La luce del giorno entra dal lucernario.",name:"Stair & skylight",k:"Double height",d:"A mint-green spiral stair rises through the double-height room to the loft. Daylight comes in through the skylight.",photos:["living_stair","double_height","stair_top"],pin:[4.4,1.9,3.15],p:[1.9,1.35,5.0],t:[4.4,2.8,2.6],roof:true,front:true,nb:false,cut:100},
  {id:"bathroom",name_it:"Bagno",k_it:"Piano terra",d_it:"Una doccia walk-in dietro un vetro cannettato, un mobile lavabo in rovere e uno specchio ovale retroilluminato sul muro in pietra.",name:"Bathroom",k:"Ground floor",d:"A walk-in shower behind ribbed glass, an oak vanity and a backlit oval mirror on the stone wall.",photos:["bathroom","barn_door"],pin:[0.6,1.4,4.0],p:[3.2,4.3,6.2],t:[0.6,0.5,3.8],roof:false,front:true,nb:false,cut:2.4},
  {id:"loft",name_it:"Camera sul soppalco",k_it:"Piano superiore",d_it:"Un letto matrimoniale sotto il tetto in legno, affacciato sul soggiorno sottostante.",name:"Loft bedroom",k:"Upstairs",d:"A double bed under the timber roof, looking out over the living room below.",photos:["loft","double_height"],pin:[2.8,3.35,1.0],p:[4.6,3.75,2.15],t:[2.4,3.0,0.5],roof:true,front:true,nb:false,cut:100}
@@ -505,7 +505,7 @@ const IT={navHouse:"La casa",navProject:"Il progetto",navYours:"La tua Pagliaroo
  leadP:"Pensata come un open space accogliente e funzionale, la casa unisce semplicità rustica e tutti i comfort necessari. Una cucina completamente attrezzata per preparare piatti con ingredienti locali, un piccolo angolo living e un bagno privato con doccia walk-in. Il soppalco ospita un accogliente letto matrimoniale, mentre un piccolo spazio esterno invita a rallentare, godersi la luce naturale e l’atmosfera tranquilla del borgo.",l1:"Cucina completamente attrezzata per preparare piatti semplici con ingredienti locali",l2:"Piccolo angolo living con sedute e dettagli dal design essenziale",l3:"Bagno privato con finiture curate e doccia walk-in",l4:"Sul soppalco, un’accogliente zona notte con letto matrimoniale",l5:"Piccolo spazio esterno per rilassarsi e godersi il borgo e la luce naturale",amH:"Servizi",a1:"Wi-Fi",a2:"Cucina completamente attrezzata (piano cottura, frigorifero, forno, utensili)",a3:"Biancheria da letto e asciugamani",a8:"Bagnoschiuma e asciugacapelli",a4:"Aria condizionata/riscaldamento",a5:"Luce naturale dal lucernario e dalla tradizionale porta a due ante orizzontali",a6:"Parcheggio gratuito in strada",a7:"Prodotti locali di benvenuto (su richiesta)",igA:"Pagliaroom su Instagram",seeProj:"Vedi il progetto",
  f1:"ospiti, un letto matrimoniale",f2:"piano terra, più un soppalco",f3:"bagno con doccia",f4b:"Cucina",f4:"lavello, piano cottura e isola-tavolo",
  reqH:"Richiedi le tue date",reqP:"L'host conferma disponibilità e prezzo prima di qualsiasi prenotazione.",
- checkin:"Arrivo",soundOn:"Audio attivo",ySubj:"La tua Pagliaroom: una piccola casa in Sicilia",
+ checkin:"Arrivo",soundOn:"Audio attivo",entrance:"Ingresso",skylight:"Lucernario",roof:"Sul tetto",ySubj:"La tua Pagliaroom: una piccola casa in Sicilia",
  cr1:"Progetto e ristrutturazione con la guida e il supporto dello",cr2:"Ideazione della cucina della interior designer",
  yH:"La tua Pagliaroom",yP:"Sogni una piccola casa tutta tua in Sicilia? Ci siamo passati: trovare un vecchio edificio in pietra, farlo rilevare, progettare e ristrutturare. Possiamo guidarti in ogni passo, oppure gestire il progetto per te.",
  o1h:"Guida",o1p:"Per chi vuole fare da sé, con qualcuno al proprio fianco. Condividiamo ciò che abbiamo imparato: da dove iniziare, quali domande fare, a chi rivolgersi e a cosa fare attenzione lungo il percorso.",
@@ -530,7 +530,7 @@ const IT={navHouse:"La casa",navProject:"Il progetto",navYours:"La tua Pagliaroo
  tour:"Tour",stopTour:"Ferma il tour",playTour:"Rivedi il tour",outside:"Esterno",inside:"Interno",err3d:"Il modello 3D non si avvia in questo browser. Usa i pulsanti delle stanze qui sotto per vedere le foto."};
 const EN={hint:"Drag to turn · scroll to zoom",seeInside:"See inside",streetView:"← Street view",photoN:"Open photo {i} of {n}",photo:"photo",openFull:"Open {t} full screen",
  show:"Show {n}",inArea:"in this area",east:"east",fromP:"from Pagliaroom",pick:"Tap a place on the map, or pick one:",allPlaces:"← All places",gmaps:"Photos and directions on Google Maps ↗",
- night:"night",nights:"nights",soundOn:"Sound on",ySubj:"Your Pagliaroom: a little house in Sicily",startTour:"Take the tour",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
+ night:"night",nights:"nights",soundOn:"Sound on",entrance:"Entrance",skylight:"Skylight",roof:"On the roof",ySubj:"Your Pagliaroom: a little house in Sicily",startTour:"Take the tour",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
  e1:"Choose a check-in and a check-out date.",e2:"Check-out must be after check-in.",e3:"Add your name.",e4:"Add an email or phone number so the host can reply.",
  rq:"Booking request",rqDates:"Dates",to:"to",rqGuests:"Guests",rqName:"Name",rqContact:"Contact",rqMsg:"Message",
  ready:"Your request is ready. Copy it and send it to the host. Nothing is booked until the host confirms.",readyTo:"Your request is ready. Send it by email to {c}. Nothing is booked until the host confirms.",
@@ -1127,14 +1127,14 @@ function initModel(){
   function apply(v){roofG.visible=v.roof;frontG.visible=v.front;nbG.visible=v.nb;clip.constant=v.cut;}
   // a: an area, or "street" (home view from the street), or "inside" (cutaway with all rooms)
   function pinVis(k){pins.forEach(p=>p.b.hidden=k==="street"?p.a.id!=="terrace":k!=="inside");}
-  function fly(a){const v=a==="street"?STREET:a==="inside"?OVERVIEW:a;camK=typeof a==="string"?a:a.id;birdsG.visible=!eveMode&&(camK==="terrace"||camK==="street");
+  function fly(a){const v=a==="street"?STREET:a==="inside"?OVERVIEW:a;camK=typeof a==="string"?a:(a.id||"tourcam");birdsG.visible=!eveMode&&(camK==="terrace"||camK==="street");
     const fromP=camera.position.clone(),fromT=controls.target.clone();
     // show walls before flying in, hide them only after arriving
     if(v.front)apply(v);
     const toP=new THREE.Vector3(...v.p),toT=new THREE.Vector3(...v.t),dist=toP.distanceTo(toT);
     // zoom-out limit: never further than the view's own starting distance (rooms get a little more room)
-    controls.maxDistance=Infinity;controls.minAzimuthAngle=-Infinity;controls.maxAzimuthAngle=Infinity;const base=camK==="street"||camK==="inside",lim=base?dist:dist*1.5,az=base?0.75:1.15;
-    fl={t0:performance.now(),dur:still?1:1300,fromP,fromT,toP,toT,after:()=>{if(!v.front)apply(v);controls.maxDistance=lim;controls.minAzimuthAngle=-az;controls.maxAzimuthAngle=az;}};
+    controls.maxDistance=Infinity;controls.minAzimuthAngle=-Infinity;controls.maxAzimuthAngle=Infinity;controls.maxPolarAngle=Math.PI;const base=camK==="street"||camK==="inside",lim=base?dist:dist*1.5,az=base?0.75:1.15;
+    fl={t0:performance.now(),dur:still?1:(v.dur||1300),fromP,fromT,toP,toT,after:()=>{if(!v.front)apply(v);controls.maxDistance=v.free?Infinity:lim;if(!v.free){controls.minAzimuthAngle=-az;controls.maxAzimuthAngle=az;controls.maxPolarAngle=Math.PI/2-0.02;}}};
     pinVis(camK);}
   camK="street";camera.position.set(...STREET.p);controls.target.set(...STREET.t);apply(STREET);controls.maxDistance=new THREE.Vector3(...STREET.p).distanceTo(new THREE.Vector3(...STREET.t));pinVis("street");controls.update();setMode(false);
   let on=true;
@@ -1172,13 +1172,19 @@ function initModel(){
 let still=false;try{still=matchMedia("(prefers-reduced-motion: reduce)").matches;}catch(e){}
 /* ---- automatic tour of the rooms (runs once on arrival; any touch on the model stops it) ---- */
 var tour={on:false,i:0,tm:null,step:null,t0:0,ms:0};
-const TOUR=[{v:"inside",ms:3600},...["living","kitchen","stair","bathroom","loft","terrace"].map(id=>({a:id,ms:5200}))];
+const CAM=(p,t,o)=>Object.assign({p,t,roof:true,front:true,nb:true,cut:100},o||{});
+const TOUR=[
+  {a:"terrace",ms:4600},
+  {v:CAM([3.45,1.45,7.6],[3.45,1.35,3.0],{dur:1800,free:true}),ms:300,lab:"entrance"},
+  ...["living","kitchen","stair","bathroom","loft"].map(id=>({a:id,ms:5200})),
+  {v:CAM([2.56,3.25,2.92],[2.56,6.5,2.78],{dur:2000,free:true}),ms:700,lab:"skylight"},
+  {v:CAM([2.56,8.0,3.2],[2.56,4.6,6.6],{dur:3000,free:true}),ms:2400,lab:"roof"}];
 function tourChip(){const b=$("tour");b.hidden=!model;b.textContent="";
   if(tour.on){b.append(tt("stopTour")+" ");const bar=document.createElement("span");bar.className="bar";bar.appendChild(document.createElement("i"));b.appendChild(bar);}
   else b.textContent="▶ "+tt(tour.ran?"playTour":"startTour");}
-function tourCaption(){const s=tour.step;if(!s)return;$("hint").textContent=`${tt("tour")} · ${s.a?tr(AREAS.find(x=>x.id===s.a),"name"):(s.v==="inside"?tt("inside"):tt("outside"))}`;}
+function tourCaption(){const s=tour.step;if(!s)return;$("hint").textContent=`${tt("tour")} · ${s.a?tr(AREAS.find(x=>x.id===s.a),"name"):(s.lab?tt(s.lab):s.v==="inside"?tt("inside"):tt("outside"))}`;}
 function tourStep(){if(!tour.on)return;if(tour.i>=TOUR.length){endTour(false);return;}
-  const s=TOUR[tour.i++];tour.step=s;tour.t0=performance.now();tour.ms=s.ms+1300;
+  const s=TOUR[tour.i++];tour.step=s;tour.t0=performance.now();tour.ms=s.ms+((s.v&&s.v.dur)||1300);
   if(s.a){const a=AREAS.find(x=>x.id===s.a);cur=a;fillSheet(a);model.fly(a);}else{hideSheet();model.fly(s.v);}
   tourCaption();
   tour.tm=setTimeout(tourStep,tour.ms);}

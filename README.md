@@ -7,7 +7,7 @@ Visitors explore the house as an interactive 3D model, open real photos of each 
 ## What's on the site
 
 - **The house**: 3D model of the house (three.js), opening on the street view.
-  - Automatic tour through the rooms on arrival, with the photo panel for each room.
+  - Guided tour (button): in through the front door, through each room with its photos, and out through the skylight onto the roof.
   - "See inside" cutaway view.
   - Day / Evening switch. Evening also turns the whole site dark, with fireflies and crickets.
   - Swallows with birdsong in the street view.
