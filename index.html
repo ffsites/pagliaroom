@@ -42,7 +42,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 
 /* hero model */
 .hero{position:relative}
-.intro{display:grid;gap:8px;padding-block:6px 22px;max-width:62ch}
+.intro{display:grid;gap:8px;padding-block:6px 22px;max-width:72ch}
 .intro h1{font-weight:300;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.01em;margin:0;text-wrap:balance}
 .intro p{margin:0;color:var(--muted)}
 .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px}
@@ -65,6 +65,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .vinyl-chip{position:absolute;left:0;top:0;display:flex;align-items:center;gap:7px;border:0;cursor:pointer;background:#1D1D1B;color:#fff;font:inherit;font-size:13px;font-weight:500;padding:6px 12px 6px 8px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.25);white-space:nowrap;transition:opacity .25s}
 .vinyl-chip .ic{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,#c0533a 0 22%,#111 24% 100%);box-shadow:0 0 0 1px rgba(255,255,255,.35)}
 .vinyl-chip.on .ic{animation:spin 1.8s linear infinite}
+.frame-chip{padding:6px 12px;background:#fff;color:#1D1D1B}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.vinyl-chip.on .ic{animation:none}}
 .hud{position:absolute;display:flex;gap:6px;align-items:center}
@@ -98,6 +99,24 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 
 /* facts */
 section.block{padding-block:72px 0}
+.feat{margin:14px 0 0;padding:0;list-style:none;color:var(--muted);display:grid;gap:6px}
+.feat li{position:relative;padding-left:20px}
+.feat li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1px;background:var(--accent)}
+.leadtxt p{margin:0}
+.amh{font-weight:400;font-size:22px;margin:0 0 16px;padding-top:28px;border-top:1px solid var(--line)}
+.amen{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 28px}
+.amen li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;font-size:14.5px;line-height:1.4}
+.amen svg{width:26px;height:26px;color:var(--ink)}
+.intro p+p{margin-top:8px}
+.sub.first{margin-top:8px}
+.sheets figure.photo button{padding:0}
+.sheets figure.photo img{height:100%;max-height:none;object-fit:cover}
+#survey{grid-template-columns:repeat(4,minmax(0,1fr))}
+#survey figure.photo{grid-row:span 1}
+footer.foot .fr{display:flex;align-items:center;gap:14px}
+footer.foot .ig{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;color:var(--ink);flex:none}
+footer.foot .ig:hover{border-color:var(--ink)}
+footer.foot .ig svg{width:20px;height:20px}
 .facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
 .facts div{padding:18px 18px 0 0;min-width:0}
 .facts b{display:block;font-weight:300;font-size:30px;letter-spacing:-.01em;line-height:1.15}
@@ -246,7 +265,8 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   .hud.br,.stagebox:has(.sheet.open) .hud.br{right:10px;top:10px;bottom:auto}
   .stagebox:has(.sheet.open) .hud.bl{top:10px;bottom:auto}
   #snd,#t-day,#t-eve{font-size:0;width:34px;height:34px;padding:0;display:grid;place-items:center}
-  #snd::before,#t-day::before,#t-eve::before{content:"";width:17px;height:17px;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+  #snd,#t-day,#t-eve{position:relative}
+  #snd::before,#t-day::before,#t-eve::before{content:"";position:absolute;inset:0;margin:auto;width:17px;height:17px;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
   #t-day{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='3.6' fill='none' stroke='black' stroke-width='1.8'/%3E%3Cpath d='M10 1.5v2.5M10 16v2.5M1.5 10H4M16 10h2.5M4 4l1.8 1.8M14.2 14.2L16 16M4 16l1.8-1.8M14.2 5.8L16 4' stroke='black' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E")}#t-eve{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M15.5 12.6A6.5 6.5 0 0 1 7.4 4.5a6.5 6.5 0 1 0 8.1 8.1z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E")}#snd{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 8h3l4-3.5v11L6 12H3z' fill='black'/%3E%3Cpath d='M13 7.2a4 4 0 0 1 0 5.6M15.2 5a7 7 0 0 1 0 10' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E")}#snd[aria-pressed="false"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 8h3l4-3.5v11L6 12H3z' fill='black'/%3E%3Cpath d='M13 7.5l5 5M18 7.5l-5 5' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E")}
   /* room card: photo left, text right, buttons below */
   .sheet{left:8px;right:8px;top:auto;bottom:8px;width:auto;height:auto;max-height:calc(100% - 64px);display:grid;grid-template-columns:40% minmax(0,1fr);grid-template-rows:auto 1fr auto;grid-template-areas:"gal head" "gal desc" "foot foot";transform:translateY(calc(100% + 24px))}
@@ -262,6 +282,13 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   .rooms{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;padding-block:12px 4px}
   .rooms::-webkit-scrollbar{display:none}
   .rooms button{flex:none}
+  .amen{grid-template-columns:1fr 1fr;gap:18px 14px}
+  .amen li{font-size:13.5px;grid-template-columns:24px minmax(0,1fr);gap:9px;overflow-wrap:anywhere}
+  .amen svg{width:22px;height:22px}
+  #survey{grid-template-columns:1fr 1fr}
+  #survey figcaption{flex-direction:column;gap:2px;padding:10px 12px;font-size:14px}
+  #survey figcaption span{font-size:12.5px}
+  footer.foot .fr{justify-content:space-between;width:100%}
   .intro h1{font-size:24px}
   .intro p{font-size:15px}
 }
@@ -285,8 +312,9 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
 <main id="house">
   <div class="wrap">
     <div class="intro">
-      <h1 data-i18n="heroH">A Sicilian Barn for a dreamy retreat</h1>
-      <p data-i18n="heroP">One restored room with a sleeping loft and a table on the street. Tap a room in the model to see it as it is.</p>
+      <h1 data-i18n="heroH">A dreamy refuge in rural Sicily</h1>
+      <p data-i18n="heroP1">We transformed an old stone “pagliarola”, once used to store straw, into an intimate retreat that celebrates quiet luxury, Sicilian craftsmanship, and a deep connection with the surrounding nature.</p>
+      <p data-i18n="heroP2">Stay in our Pagliaroom and immerse yourself in the local flavours, traditions, and timeless landscapes of Santo Stefano Quisquina.</p>
     </div>
 
     <div class="stagebox" id="stagebox">
@@ -294,6 +322,7 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
       <div class="pins" id="pins"></div>
       <div class="hud tl"><span class="hint" id="hint">Drag to turn · scroll to zoom</span></div>
       <div class="hud bl"><button class="chip tour" id="tour" hidden></button><button class="chip" id="inside">See inside</button><button class="chip" id="back" hidden data-i18n="back">← Back</button></div>
+      <button class="vinyl-chip frame-chip" id="framechip" hidden><span class="lab" data-i18n="seeProj">See the project</span> →</button>
       <button class="vinyl-chip" id="vinyl" hidden><span class="ic" aria-hidden="true"></span><span class="lab"></span></button>
       <div class="hud br">
         <button class="chip" id="snd" aria-pressed="true"></button>
@@ -313,14 +342,11 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   <section class="block"><div class="wrap">
     <div class="lead">
       <h2 data-i18n="leadH">Original stone walls, a timber roof and light from above.</h2>
-      <p data-i18n="leadP">Pagliaroom is a single-room house in the old town of Santo Stefano Quisquina. The ground floor is one open space for cooking and sitting, with a shower room. A mint-green spiral stair leads to the bed in the loft, under a skylight and the exposed timber roof. Outside, a small table and two chairs stand by the front door.</p>
+      <div class="leadtxt"><p data-i18n="leadP">The property is designed as a cozy and functional open space, offering comfort with simplicity:</p>
+        <ul class="feat"><li data-i18n="l1">Fully equipped kitchen for preparing simple meals with local ingredients</li><li data-i18n="l2">Small living corner with seating and minimal design details</li><li data-i18n="l3">Private bathroom with carefully selected finishes and a walk-in shower</li><li data-i18n="l4">On the mezzanine, an inviting sleeping area with a double bed</li><li data-i18n="l5">Small outdoor space to relax and enjoy the surrounding village and natural light</li></ul></div>
     </div>
-    <div class="facts">
-      <div><b>2</b><span data-i18n="f1">guests, one double bed</span></div>
-      <div><b>26 m²</b><span data-i18n="f2">ground floor, plus a sleeping loft</span></div>
-      <div><b>1</b><span data-i18n="f3">shower room</span></div>
-      <div><b data-i18n="f4b">Kitchen</b><span data-i18n="f4">sink, hob and island table</span></div>
-    </div>
+    <h3 class="amh" data-i18n="amH">Amenities</h3>
+    <ul class="amen"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.8 12.4a9.3 9.3 0 0 1 12.4 0M9.1 15.8a4.6 4.6 0 0 1 5.8 0"/><circle cx="12" cy="19.2" r=".9" fill="currentColor"/></svg><span data-i18n="a1">Wi-Fi</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v5.5A4.5 4.5 0 0 1 15.5 20h-7A4.5 4.5 0 0 1 4 15.5zM2 11h2M20 11h2M9 6.5c0-1.2 1-1.4 1-2.6M13 6.5c0-1.2 1-1.4 1-2.6"/></svg><span data-i18n="a2">Fully equipped kitchen (stove, fridge, oven, utensils)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19v-9M3 15h18v4M21 15v-2.5A2.5 2.5 0 0 0 18.5 10H11v5"/><circle cx="7" cy="12.2" r="1.7"/></svg><span data-i18n="a3">Bed linen and towels</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5L12 6.5l2.5-2M9.5 19.5l2.5-2 2.5 2"/></svg><span data-i18n="a4">Air Conditioner/Heating</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 4l9 6.5M5 9v11h14V9M9.5 20v-6h5v6M9.5 17h5"/><path d="M10 8.5h4" /></svg><span data-i18n="a5">Natural light with a skywindow and traditional stable door</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="3.5"/><path d="M10 16.5V8h3.2a2.6 2.6 0 0 1 0 5.2H10"/></svg><span data-i18n="a6">Free parking on the street</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10h17l-1.6 9.2a1.5 1.5 0 0 1-1.5 1.3H6.6a1.5 1.5 0 0 1-1.5-1.3zM8 10l3-6M16 10l-3-6M9 13.5v3.5M12 13.5v3.5M15 13.5v3.5"/></svg><span data-i18n="a7">Local welcome products (on request)</span></li></ul>
   </div></section>
 
   <section class="block" id="book"><div class="wrap">
@@ -370,9 +396,11 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
 
 <section id="project" hidden><div class="wrap">
   <h1 class="ptitle" data-i18n="pTitle">The project</h1>
-  <div class="lead">
+  <h3 class="sub first" data-i18n="survH">Before the renovation</h3>
+  <div class="survey sheets" id="survey"></div>
+  <div class="lead" style="margin-top:64px">
     <h2 data-i18n="pH">From a street-level storeroom to a house for two.</h2>
-    <p data-i18n="pP">The house was surveyed as a single ground-floor storeroom of 26.26 m² under a mono-pitch roof, 5.40 m high at the back and 4.15 m at the street. The project keeps the rubble stone walls and the arched openings, fits a kitchen, living area and shower room on the ground floor, and uses the height for a timber sleeping loft reached by a spiral stair.</p>
+    <p data-i18n="pP">Carefully renovated to preserve its authentic soul, the space blends traditional materials with simple, refined design, creating a warm and peaceful atmosphere. It’s the perfect place for those seeking nature, silence, and a truly local experience from mass tourism.</p>
   </div>
   <div class="pfacts">
     <div><b data-i18n="pf1b">26.26 m²</b><span data-i18n="pf1">ground floor, net</span></div>
@@ -381,12 +409,10 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
     <div><b data-i18n="pf4b">0.62 m</b><span data-i18n="pf4">stone walls</span></div>
   </div>
   <div class="sheets" id="sheets"></div>
-  <h3 class="sub" data-i18n="survH">Survey drawings before the work</h3>
-  <div class="survey sheets" id="survey"></div>
   <p class="note" style="margin-top:24px" data-i18n="survNote">Drawings redrawn from the measured survey at 1:50, dimensions in metres. Some levels are scaled from the drawings or assumed.</p>
 </div></section>
 
-<footer class="foot"><div class="wrap"><span>Pagliaroom</span><span data-i18n="foot">The model shows the layout; photos show the house as it is.</span></div></footer>
+<footer class="foot"><div class="wrap"><span>Pagliaroom © 2027</span><span class="fr"><span data-i18n="foot">A place designed to slow down, breathe, and experience the most authentic side of Sicily</span><a class="ig" href="https://www.instagram.com/pagliaroom/" target="_blank" rel="noopener" aria-label="Pagliaroom on Instagram" data-i18n-aria="igA"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg></a></span></div></footer>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo">
   <div class="bar"><span id="lb-c"></span><button id="lb-x" data-i18n="close">Close</button></div>
@@ -400,7 +426,7 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
 /* ---- host settings: fill these in ---- */
 const HOST={pricePerNight:null,currency:"€",contact:"info@pagliaroom.com",location:null};
 /* ---- photos ---- */
-const IMG={"facade_day": {"src": "assets/photos/facade_day.jpg", "w": 960, "h": 1280}, "terrace_table": {"src": "assets/photos/terrace_table.jpg", "w": 960, "h": 1280}, "door_day": {"src": "assets/photos/door_day.jpg", "w": 960, "h": 1280}, "facade_night": {"src": "assets/photos/facade_night.jpg", "w": 540, "h": 360}, "facade_dusk": {"src": "assets/photos/facade_dusk.jpg", "w": 540, "h": 360}, "door_night": {"src": "assets/photos/door_night.jpg", "w": 360, "h": 540}, "sofa": {"src": "assets/photos/sofa.jpg", "w": 960, "h": 1280}, "barn_door": {"src": "assets/photos/barn_door.jpg", "w": 540, "h": 360}, "living_stair": {"src": "assets/photos/living_stair.jpg", "w": 960, "h": 1280}, "kitchen": {"src": "assets/photos/kitchen.jpg", "w": 360, "h": 540}, "stair_top": {"src": "assets/photos/stair_top.jpg", "w": 540, "h": 360}, "double_height": {"src": "assets/photos/double_height.jpg", "w": 360, "h": 540}, "bathroom": {"src": "assets/photos/bathroom.jpg", "w": 360, "h": 540}, "loft": {"src": "assets/photos/loft.jpg", "w": 960, "h": 1280}};
+const IMG={"facade_day": {"src": "assets/photos/facade_day.jpg", "w": 960, "h": 1280}, "terrace_table": {"src": "assets/photos/terrace_table.jpg", "w": 960, "h": 1280}, "door_day": {"src": "assets/photos/door_day.jpg", "w": 960, "h": 1280}, "facade_night": {"src": "assets/photos/facade_night.jpg", "w": 540, "h": 360}, "facade_dusk": {"src": "assets/photos/facade_dusk.jpg", "w": 540, "h": 360}, "door_night": {"src": "assets/photos/door_night.jpg", "w": 360, "h": 540}, "sofa": {"src": "assets/photos/sofa.jpg", "w": 960, "h": 1280}, "barn_door": {"src": "assets/photos/barn_door.jpg", "w": 540, "h": 360}, "living_stair": {"src": "assets/photos/living_stair.jpg", "w": 960, "h": 1280}, "kitchen": {"src": "assets/photos/kitchen.jpg", "w": 360, "h": 540}, "stair_top": {"src": "assets/photos/stair_top.jpg", "w": 540, "h": 360}, "double_height": {"src": "assets/photos/double_height.jpg", "w": 360, "h": 540}, "bathroom": {"src": "assets/photos/bathroom.jpg", "w": 360, "h": 540}, "loft": {"src": "assets/photos/loft.jpg", "w": 960, "h": 1280}, "before1": {"src": "assets/photos/before1.jpg", "w": 768, "h": 1024}};
 const W=5.12, D=5.10, T=0.62;
 const roofTop=z=>5.40-1.25*(z+0.64)/6.36;   // top of roof, back face z=-0.64 to street face z=5.72
 const wallTop=z=>roofTop(z)-0.35;            // masonry top (3.80 at street face)
@@ -431,21 +457,21 @@ const OVERVIEW={p:[1.6,8.4,12.2],t:[2.56,1.0,2.6],roof:false,front:false,nb:true
 /* ---- sheet + lightbox ---- */
 const $=id=>document.getElementById(id);
 /* ---- language ---- */
-const IT={navHouse:"La casa",navProject:"Progetto",book:"Prenota",heroH:"Un fienile siciliano per un ritiro da sogno",
+const IT={navHouse:"La casa",navProject:"Progetto",book:"Prenota",heroH:"Un rifugio da sogno nella Sicilia rurale",heroP1:"Abbiamo trasformato un’antica «pagliarola» in pietra, un tempo usata per conservare la paglia, in un rifugio intimo che celebra il lusso discreto, l’artigianato siciliano e un legame profondo con la natura circostante.",heroP2:"Soggiorna nella nostra Pagliaroom e immergiti nei sapori, nelle tradizioni e nei paesaggi senza tempo di Santo Stefano Quisquina.",
  heroP:"Un unico ambiente restaurato con soppalco per dormire e un tavolino sulla strada. Tocca una stanza nel modello per vederla com'è davvero.",
  back:"← Indietro",day:"Giorno",eve:"Sera",nextRoom:"Stanza successiva →",
  leadH:"Muri originali in pietra, un tetto in legno e luce dall'alto.",
- leadP:"Pagliaroom è una casa di un solo ambiente nel centro storico di Santo Stefano Quisquina. Il piano terra è un unico spazio per cucinare e stare insieme, con un bagno con doccia. Una scala a chiocciola verde menta porta al letto nel soppalco, sotto un lucernario e il tetto in legno a vista. Fuori, un tavolino e due sedie accanto alla porta d'ingresso.",
+ leadP:"La casa è pensata come un open space accogliente e funzionale, che offre comfort nella semplicità:",l1:"Cucina completamente attrezzata per preparare piatti semplici con ingredienti locali",l2:"Piccolo angolo living con sedute e dettagli dal design essenziale",l3:"Bagno privato con finiture curate e doccia walk-in",l4:"Sul soppalco, un’accogliente zona notte con letto matrimoniale",l5:"Piccolo spazio esterno per rilassarsi e godersi il borgo e la luce naturale",amH:"Servizi",a1:"Wi-Fi",a2:"Cucina completamente attrezzata (piano cottura, frigorifero, forno, utensili)",a3:"Biancheria da letto e asciugamani",a4:"Aria condizionata/riscaldamento",a5:"Luce naturale dal lucernario e dalla tradizionale porta a due ante orizzontali",a6:"Parcheggio gratuito in strada",a7:"Prodotti locali di benvenuto (su richiesta)",igA:"Pagliaroom su Instagram",seeProj:"Vedi il progetto",
  f1:"ospiti, un letto matrimoniale",f2:"piano terra, più un soppalco",f3:"bagno con doccia",f4b:"Cucina",f4:"lavello, piano cottura e isola-tavolo",
  reqH:"Richiedi le tue date",reqP:"L'host conferma disponibilità e prezzo prima di qualsiasi prenotazione.",
  checkin:"Arrivo",soundOn:"Audio attivo",sendMail:"Invia per email",mailAlt:"Se l’app di posta non si apre, copia la richiesta e inviala a {c}.",nextPhoto:"Foto {i} di {n}. Mostra la foto successiva",soundOff:"Audio spento",playRec:"Metti il disco",stopRec:"Ferma il disco",addDate:"Aggiungi data",prevM:"Mese precedente",nextM:"Mese successivo",checkout:"Partenza",guests:"Ospiti",name:"Nome",contact:"Email o telefono",msgL:"Messaggio (facoltativo)",msgPh:"Orario di arrivo, domande…",
  prep:"Prepara la richiesta",copyReq:"Copia la richiesta",edit:"Modifica",gtk:"Da sapere",g1:"Fino a 2 ospiti.",g2:"Il letto è nel soppalco, raggiungibile con una scala a chiocciola.",g3:"Aria condizionata su entrambi i livelli.",
  mapH:"Dintorni di Pagliaroom",mapNote:"Il cerchio indica la zona di Pagliaroom, non l'indirizzo esatto. Le distanze sono in linea d'aria dalla casa.",
  pTitle:"Il progetto",pH:"Da magazzino al piano strada a casa per due.",
- pP:"La casa è stata rilevata come un unico magazzino al piano terra di 26,26 m², con tetto a una falda alto 5,40 m sul retro e 4,15 m sulla strada. Il progetto conserva i muri in pietra e le aperture ad arco, inserisce cucina, zona giorno e bagno con doccia al piano terra, e sfrutta l'altezza per un soppalco in legno raggiunto da una scala a chiocciola.",
+ pP:"Ristrutturata con cura per preservarne l’anima autentica, la casa unisce materiali tradizionali e un design semplice e raffinato, creando un’atmosfera calda e serena. È il luogo ideale per chi cerca natura, silenzio e un’esperienza davvero locale, lontano dal turismo di massa.",
  pf1b:"26,26 m²",pf1:"piano terra, netti",pf2b:"5,12 × 5,10 m",pf2:"interno",pf3b:"5,40 / 4,15 m",pf3:"altezza del tetto, retro / strada",pf4b:"0,62 m",pf4:"muri in pietra",
- survH:"Rilievo prima dei lavori",survNote:"Disegni ricavati dal rilievo in scala 1:50, misure in metri. Alcune quote sono misurate sui disegni o ipotizzate.",
- foot:"Il modello mostra la distribuzione; le foto mostrano la casa com'è.",close:"Chiudi",prev:"← Precedente",next:"Successiva →",
+ survH:"Prima della ristrutturazione",survNote:"Disegni ricavati dal rilievo in scala 1:50, misure in metri. Alcune quote sono misurate sui disegni o ipotizzate.",
+ foot:"Un luogo pensato per rallentare, respirare e vivere il lato più autentico della Sicilia",close:"Chiudi",prev:"← Precedente",next:"Successiva →",
  hint:"Trascina per ruotare · scorri per lo zoom",seeInside:"Guarda dentro",streetView:"← Vista strada",photoN:"Apri la foto {i} di {n}",photo:"foto",openFull:"Apri {t} a schermo intero",
  show:"Mostra {n}",inArea:"in questa zona",east:"a est",fromP:"da Pagliaroom",pick:"Tocca un luogo sulla mappa o scegline uno:",allPlaces:"← Tutti i luoghi",gmaps:"Foto e indicazioni su Google Maps ↗",
  night:"notte",nights:"notti",selDates:"Seleziona le date",priceConf:"Prezzo alla conferma",perNight:"/ notte",
@@ -456,7 +482,7 @@ const IT={navHouse:"La casa",navProject:"Progetto",book:"Prenota",heroH:"Un fien
  tour:"Tour",stopTour:"Ferma il tour",playTour:"Rivedi il tour",outside:"Esterno",inside:"Interno",err3d:"Il modello 3D non si avvia in questo browser. Usa i pulsanti delle stanze qui sotto per vedere le foto."};
 const EN={hint:"Drag to turn · scroll to zoom",seeInside:"See inside",streetView:"← Street view",photoN:"Open photo {i} of {n}",photo:"photo",openFull:"Open {t} full screen",
  show:"Show {n}",inArea:"in this area",east:"east",fromP:"from Pagliaroom",pick:"Tap a place on the map, or pick one:",allPlaces:"← All places",gmaps:"Photos and directions on Google Maps ↗",
- night:"night",nights:"nights",soundOn:"Sound on",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
+ night:"night",nights:"nights",soundOn:"Sound on",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
  e1:"Choose a check-in and a check-out date.",e2:"Check-out must be after check-in.",e3:"Add your name.",e4:"Add an email or phone number so the host can reply.",
  rq:"Booking request",rqDates:"Dates",to:"to",rqGuests:"Guests",rqName:"Name",rqContact:"Contact",rqMsg:"Message",
  ready:"Your request is ready. Copy it and send it to the host. Nothing is booked until the host confirms.",readyTo:"Your request is ready. Send it by email to {c}. Nothing is booked until the host confirms.",
@@ -511,10 +537,12 @@ document.addEventListener("keydown",e=>{if(!$("lb").hidden){if(e.key==="Escape")
 
 /* ---- project page ---- */
 function sheetCard(box,key,title,sub,cls,list,label){const f=document.createElement("figure");if(cls)f.className=cls;
-  const b=document.createElement("button");b.setAttribute("aria-label",tt("openFull",{t:title}));const im=document.createElement("img");im.src=DRAW[key].src;im.alt=title;im.loading="lazy";b.appendChild(im);
+  const b=document.createElement("button");b.setAttribute("aria-label",tt("openFull",{t:title}));const im=document.createElement("img");im.src=(DRAW[key]||IMG[key]).src;im.alt=title;im.loading="lazy";b.appendChild(im);
   b.onclick=()=>openLB(list,list.indexOf(key),label,true);f.appendChild(b);
   const c=document.createElement("figcaption");const t=document.createElement("b");t.textContent=title;const s=document.createElement("span");s.textContent=sub;c.append(t,s);f.appendChild(c);box.appendChild(f);}
+const BEFORE=[["before1","Pagliaroom before the renovation","the street front","Pagliaroom prima della ristrutturazione","il fronte su strada"]];
 function buildSheets(){$("sheets").textContent="";$("survey").textContent="";const it=LANG==="it";
+  BEFORE.forEach(([k,t,sub,ti,subi])=>sheetCard($("survey"),k,it?ti:t,it?subi:sub,"photo",BEFORE.map(x=>x[0]),tt("survH")));
   SHEETS.forEach(([k,no,t,cls,ti])=>sheetCard($("sheets"),k,`${no}  ${it?ti:t}`,"1:50",cls,SHEETS.map(x=>x[0]),tt("drawings")));
   SURVEY.forEach(([k,t,sub,ti,subi])=>sheetCard($("survey"),k,it?ti:t,it?subi:sub,"",SURVEY.map(x=>x[0]),tt("survey")));}
 buildSheets();
@@ -963,14 +991,27 @@ function initModel(){
    const tube=cyl(0.004,0.21,0,0.012,0.105,alu,arm,8);tube.rotation.x=Math.PI/2;box(-0.012,0.0,0.2,0.012,0.012,0.23,M.black,arm);
    arm.rotation.y=0.35;}
   vinyl.traverse(o=>{if(o.isMesh)o.userData.vinyl=true;});
+  const frame=new THREE.Group();frame.position.set(3.15,1.52,0.0);house.add(frame);
+  {const fw=0.40,fh=0.52,oak=std({color:0x3b2a1c,roughness:.6});
+   box(-fw/2,-fh/2,0.0,fw/2,fh/2,0.03,oak,frame);
+   box(-fw/2+.025,-fh/2+.025,0.03,fw/2-.025,fh/2-.025,0.034,std({color:0xf3efe6,roughness:.9}),frame);
+   const tex=new THREE.TextureLoader().load(IMG.before1.src);tex.encoding=THREE.sRGBEncoding;
+   const ph=new THREE.Mesh(new THREE.PlaneGeometry(0.27,0.36),std({map:tex,roughness:.7}));ph.position.set(0,0.01,0.0355);frame.add(ph);}
+  const goProject=()=>{if(tour.on)endTour(false,true);location.hash="project";};
+  $("framechip").onclick=e=>{e.stopPropagation();goProject();};
   /* ---- sound: birdsong while the birds fly past, and the record ---- */
   const au={c:null,m:null,on:true,nb:0,nc:[0,0],pending:false,buf:null,buf2:null,src:null,src2:null,playing:false,started:0,run:0};
   function ensureAudio(){if(au.c)return au.c;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;
     au.c=new AC();au.m=au.c.createGain();au.m.gain.value=au.on?1:0;au.m.connect(au.c.destination);return au.c;}
-  const unlock=()=>{const c=ensureAudio();if(c&&c.state==="suspended")c.resume();
+  try{if(navigator.audioSession)navigator.audioSession.type="playback";}catch(e){}
+  let primed=false,keep=null;
+  const unlock=()=>{const c=ensureAudio();if(!c)return;if(c.state!=="running")c.resume();
+    if(!primed){primed=true;try{const b=c.createBuffer(1,1,22050),src=c.createBufferSource();src.buffer=b;src.connect(c.destination);src.start(0);}catch(e){}
+      // older iPhones mute Web Audio with the ring/silent switch unless a media element is playing: keep a silent one looping
+      if(!navigator.audioSession&&/iP(hone|ad|od)|Macintosh.*Mobile/.test(navigator.userAgent)){try{keep=new Audio("data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQQAAACAgICA");keep.loop=true;keep.volume=0.01;keep.setAttribute("playsinline","");keep.play().catch(()=>{});}catch(e){}}}
     // the record was asked for by the automatic tour before the browser allowed sound: start it at the first touch
     if(au.pending){au.pending=false;if(tour.on&&!au.playing&&au.on)playRecord().catch(()=>stopRecord());}};
-  ["pointerdown","keydown","touchstart"].forEach(ev=>document.addEventListener(ev,unlock,{passive:true}));
+  ["pointerdown","pointerup","touchstart","touchend","click","keydown"].forEach(ev=>document.addEventListener(ev,unlock,{passive:true,capture:true}));
   function tone(t0,f0,f1,dur,vol,pan){const c=au.c,o=c.createOscillator(),g=c.createGain();o.type="sine";
     o.frequency.setValueAtTime(f0,t0);o.frequency.exponentialRampToValueAtTime(f1,t0+dur);
     g.gain.setValueAtTime(0.0001,t0);g.gain.exponentialRampToValueAtTime(vol,t0+Math.min(.012,dur*.3));g.gain.exponentialRampToValueAtTime(0.0001,t0+dur);
@@ -1015,9 +1056,9 @@ function initModel(){
   renderer.domElement.addEventListener("pointerdown",e=>{down={x:e.clientX,y:e.clientY,t:performance.now()};});
   renderer.domElement.addEventListener("pointerup",e=>{if(!down)return;const d=Math.hypot(e.clientX-down.x,e.clientY-down.y),dt=performance.now()-down.t;down=null;if(d>6||dt>500)return;
     const r=renderer.domElement.getBoundingClientRect();ndc.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(ndc,camera);
-    const hit=ray.intersectObject(vinyl,true)[0];if(hit)toggleRecord();});
+    if(ray.intersectObject(vinyl,true)[0])toggleRecord();else if(ray.intersectObject(frame,true)[0])goProject();});
   renderer.domElement.addEventListener("pointermove",e=>{if(down)return;const r=renderer.domElement.getBoundingClientRect();ndc.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(ndc,camera);
-    renderer.domElement.style.cursor=ray.intersectObject(vinyl,true).length?"pointer":"";});
+    renderer.domElement.style.cursor=(ray.intersectObject(vinyl,true).length||ray.intersectObject(frame,true).length)?"pointer":"";});
   anim.push(t=>{if(au.playing){platter.rotation.y-=0.058;arm.rotation.y+=(0.02-arm.rotation.y)*.08;}else arm.rotation.y+=(0.35-arm.rotation.y)*.08;});
   /* pins */
   const pinBox=$("pins");
@@ -1056,6 +1097,10 @@ function initModel(){
     if(!still){const t=clock.getElapsedTime()+4;anim.forEach(f=>f(t));}
     controls.update();renderer.render(scene,camera);
     const w=stage.clientWidth,h=stage.clientHeight;
+    {const fc=$("framechip");tmp.set(3.15,1.84,0.05).project(camera);const dist=camera.position.distanceTo(frame.getWorldPosition(new THREE.Vector3()));
+      const vis=!cur&&!tour.on?false:tmp.z<1&&Math.abs(tmp.x)<0.95&&Math.abs(tmp.y)<0.95&&dist<6.5&&clip.constant>1.9;
+      const show=tmp.z<1&&Math.abs(tmp.x)<0.95&&Math.abs(tmp.y)<0.95&&dist<6.5&&clip.constant>1.9&&camera.position.z>0.3;fc.hidden=!show;
+      if(show)fc.style.transform=`translate(${((tmp.x+1)/2*w).toFixed(1)}px,${((1-tmp.y)/2*h).toFixed(1)}px) translate(-50%,-110%)`;}
     {const vc=$("vinyl");tmp.set(1.42,0.78,-0.12).project(camera);const dist=camera.position.distanceTo(vinyl.getWorldPosition(new THREE.Vector3()));
       const vis=tmp.z<1&&Math.abs(tmp.x)<0.95&&Math.abs(tmp.y)<0.95&&dist<6.5&&clip.constant>0.7;vc.hidden=!vis;
       if(vis)vc.style.transform=`translate(${((tmp.x+1)/2*w).toFixed(1)}px,${((1-tmp.y)/2*h).toFixed(1)}px) translate(-50%,-130%)`;}
@@ -1084,10 +1129,11 @@ function startTour(){if(!model)return;if(cur){cur=null;$("sheet").classList.remo
   tour.on=true;tour.i=0;$("inside").hidden=true;$("back").hidden=true;tourChip();tourStep();model.tourRecord();}
 function endTour(openRoom,silent){if(!tour.on)return;tour.on=false;clearTimeout(tour.tm);const s=tour.step;tourChip();
   if(silent)return;
-  if(openRoom&&s&&s.a){openArea(s.a,true);return;}
-  // finished or stopped: close the photos and settle on a whole-house view
-  const finished=tour.i>=TOUR.length;hideSheet();
-  base=finished||(s&&s.a==="terrace")?"street":"inside";$("hint").textContent=tt("hint");setBase(base);model.fly(base);}
+  const finished=tour.i>=TOUR.length&&!openRoom;
+  // stopped by the visitor: stay exactly where the camera is (a room keeps its photo card)
+  if(!finished){if(s&&s.a){openArea(s.a,true);return;}hideSheet();base=s&&s.v==="street"?"street":"inside";$("hint").textContent=tt("hint");setBase(base);return;}
+  // the tour ran to the end: settle on the street view
+  hideSheet();base="street";$("hint").textContent=tt("hint");setBase(base);model.fly(base);}
 $("tour").onclick=()=>{tour.on?endTour(false):startTour();};
 (function tick(){requestAnimationFrame(tick);if(!tour.on)return;const i=$("tour").querySelector(".bar i");
   if(i){const k=(tour.i-1+Math.min(1,(performance.now()-tour.t0)/tour.ms))/TOUR.length;i.style.width=(k*100).toFixed(1)+"%";}})();
@@ -1098,6 +1144,7 @@ function applyLang(l){LANG=l;try{localStorage.setItem("pagliaroom-lang",l);}catc
   document.documentElement.lang=l;
   document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=tt(e.dataset.i18n);});
   document.querySelectorAll("[data-i18n-ph]").forEach(e=>{e.placeholder=tt(e.dataset.i18nPh);});
+  document.querySelectorAll("[data-i18n-aria]").forEach(e=>{e.setAttribute("aria-label",tt(e.dataset.i18nAria));});
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
   buildRooms();buildSheets();drawMap();showPoi(poiId);upd();
   if(cur)openArea(cur.id,true);else if(tour.on)tourCaption();else{$("hint").textContent=tt("hint");setBase(base);}
