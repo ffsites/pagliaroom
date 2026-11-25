@@ -42,7 +42,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 
 /* hero model */
 .hero{position:relative}
-.intro{display:grid;gap:8px;padding-block:6px 22px;max-width:72ch}
+.intro{display:grid;gap:8px;padding-block:6px 22px;max-width:none}
 .intro h1{font-weight:300;font-size:clamp(24px,2.6vw,32px);line-height:1.2;letter-spacing:-.01em;margin:0;text-wrap:balance}
 .intro p{margin:0;color:var(--muted)}
 .lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:2px}
@@ -313,7 +313,6 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   <div class="wrap">
     <div class="intro">
       <h1 data-i18n="heroH">A dreamy refuge in rural Sicily</h1>
-      <p data-i18n="heroP1">We transformed an old stone “pagliarola”, once used to store straw, into an intimate retreat that celebrates quiet luxury, Sicilian craftsmanship, and a deep connection with the surrounding nature.</p>
       <p data-i18n="heroP2">Stay in our Pagliaroom and immerse yourself in the local flavours, traditions, and timeless landscapes of Santo Stefano Quisquina.</p>
     </div>
 
@@ -342,11 +341,10 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   <section class="block"><div class="wrap">
     <div class="lead">
       <h2 data-i18n="leadH">Original stone walls, a timber roof and light from above.</h2>
-      <div class="leadtxt"><p data-i18n="leadP">The property is designed as a cozy and functional open space, offering comfort with simplicity:</p>
-        <ul class="feat"><li data-i18n="l1">Fully equipped kitchen for preparing simple meals with local ingredients</li><li data-i18n="l2">Small living corner with seating and minimal design details</li><li data-i18n="l3">Private bathroom with carefully selected finishes and a walk-in shower</li><li data-i18n="l4">On the mezzanine, an inviting sleeping area with a double bed</li><li data-i18n="l5">Small outdoor space to relax and enjoy the surrounding village and natural light</li></ul></div>
+      <div class="leadtxt"><p data-i18n="leadP">Designed as a charming, functional open space, the property combines rustic simplicity with all the comforts you need. Enjoy a fully equipped kitchen for preparing meals with local ingredients, a cosy living corner and a private bathroom with a walk-in shower. A mezzanine hosts a welcoming double bed, while a small outdoor space invites you to slow down, soak up the natural light and enjoy the peaceful atmosphere of the village.</p></div>
     </div>
     <h3 class="amh" data-i18n="amH">Amenities</h3>
-    <ul class="amen"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.8 12.4a9.3 9.3 0 0 1 12.4 0M9.1 15.8a4.6 4.6 0 0 1 5.8 0"/><circle cx="12" cy="19.2" r=".9" fill="currentColor"/></svg><span data-i18n="a1">Wi-Fi</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v5.5A4.5 4.5 0 0 1 15.5 20h-7A4.5 4.5 0 0 1 4 15.5zM2 11h2M20 11h2M9 6.5c0-1.2 1-1.4 1-2.6M13 6.5c0-1.2 1-1.4 1-2.6"/></svg><span data-i18n="a2">Fully equipped kitchen (stove, fridge, oven, utensils)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19v-9M3 15h18v4M21 15v-2.5A2.5 2.5 0 0 0 18.5 10H11v5"/><circle cx="7" cy="12.2" r="1.7"/></svg><span data-i18n="a3">Bed linen and towels</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5L12 6.5l2.5-2M9.5 19.5l2.5-2 2.5 2"/></svg><span data-i18n="a4">Air Conditioner/Heating</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 4l9 6.5M5 9v11h14V9M9.5 20v-6h5v6M9.5 17h5"/><path d="M10 8.5h4" /></svg><span data-i18n="a5">Natural light with a skywindow and traditional stable door</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="3.5"/><path d="M10 16.5V8h3.2a2.6 2.6 0 0 1 0 5.2H10"/></svg><span data-i18n="a6">Free parking on the street</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10h17l-1.6 9.2a1.5 1.5 0 0 1-1.5 1.3H6.6a1.5 1.5 0 0 1-1.5-1.3zM8 10l3-6M16 10l-3-6M9 13.5v3.5M12 13.5v3.5M15 13.5v3.5"/></svg><span data-i18n="a7">Local welcome products (on request)</span></li></ul>
+    <ul class="amen"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.8 12.4a9.3 9.3 0 0 1 12.4 0M9.1 15.8a4.6 4.6 0 0 1 5.8 0"/><circle cx="12" cy="19.2" r=".9" fill="currentColor"/></svg><span data-i18n="a1">Wi-Fi</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v5.5A4.5 4.5 0 0 1 15.5 20h-7A4.5 4.5 0 0 1 4 15.5zM2 11h2M20 11h2M9 6.5c0-1.2 1-1.4 1-2.6M13 6.5c0-1.2 1-1.4 1-2.6"/></svg><span data-i18n="a2">Fully equipped kitchen (stove, fridge, oven, utensils)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19v-9M3 15h18v4M21 15v-2.5A2.5 2.5 0 0 0 18.5 10H11v5"/><circle cx="7" cy="12.2" r="1.7"/></svg><span data-i18n="a3">Bed linen and towels</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h5v11H5zM6.5 9V6.5h2V9M7.5 4.5v2"/><path d="M14 6.5h3.5a3 3 0 0 1 0 6H14zM14 9.5h-1.5M15.5 12.5l-1 7h2.5l.8-6.6"/></svg><span data-i18n="a8">Shower gel and hairdryer</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5L12 6.5l2.5-2M9.5 19.5l2.5-2 2.5 2"/></svg><span data-i18n="a4">Air Conditioner/Heating</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 4l9 6.5M5 9v11h14V9M9.5 20v-6h5v6M9.5 17h5"/><path d="M10 8.5h4" /></svg><span data-i18n="a5">Natural light with a skywindow and traditional stable door</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="3.5"/><path d="M10 16.5V8h3.2a2.6 2.6 0 0 1 0 5.2H10"/></svg><span data-i18n="a6">Free parking on the street</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10h17l-1.6 9.2a1.5 1.5 0 0 1-1.5 1.3H6.6a1.5 1.5 0 0 1-1.5-1.3zM8 10l3-6M16 10l-3-6M9 13.5v3.5M12 13.5v3.5M15 13.5v3.5"/></svg><span data-i18n="a7">Local welcome products (on request)</span></li></ul>
   </div></section>
 
   <section class="block" id="book"><div class="wrap">
@@ -379,7 +377,7 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
         <ul>
           <li data-i18n="g1">Up to 2 guests.</li>
           <li data-i18n="g2">The bed is in the loft, reached by a spiral stair.</li>
-          <li data-i18n="g3">Air conditioning on both levels.</li>
+          
           <li id="loc-li" hidden></li>
         </ul>
       </aside>
@@ -395,7 +393,7 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
 </main>
 
 <section id="project" hidden><div class="wrap">
-  <h1 class="ptitle" data-i18n="pTitle">The project</h1>
+  <div class="intro pintro"><h1 data-i18n="pTitle">We transformed an old stone “pagliarola”</h1><p data-i18n="pSub">Once used to store straw, into an intimate retreat that celebrates quiet luxury, Sicilian craftsmanship, and a deep connection with the surrounding nature.</p></div>
   <h3 class="sub first" data-i18n="survH">Before the renovation</h3>
   <div class="survey sheets" id="survey"></div>
   <div class="lead" style="margin-top:64px">
@@ -442,15 +440,15 @@ const SKY={x0:1.46,x1:3.66,l0:-0.14,l1:0.44};SKY.z0=RZC+SKY.l0*Math.cos(RA);SKY.
 function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
 const AREAS=[
  {id:"terrace",name_it:"Esterno",k_it:"Strada",d_it:"La facciata in pietra con la porta ad arco e le persiane. Accanto alla porta, un tavolino da bistrot, due sedie e fioriere con erbe aromatiche.",name:"Outside",k:"Street",d:"The stone facade with its arched door and shutters. A bistro table, two chairs and herb planters sit by the door.",photos:["facade_day","terrace_table","door_day","facade_dusk","facade_night","door_night"],pin:[1.0,1.15,6.45],p:[2.2,2.8,11.6],t:[2.4,2.05,4.6],roof:true,front:true,nb:true,cut:100},
- {id:"living",name_it:"Soggiorno",k_it:"Piano terra",d_it:"Un divano angolare in velluto a coste contro il muro in pietra originale, un tavolino basso in marmo e la porta scorrevole del bagno.",name:"Living",k:"Ground floor",d:"A corduroy corner sofa against the original stone wall, a low marble table, and the barn door to the shower room.",photos:["sofa","barn_door","living_stair"],pin:[0.5,1.05,1.5],p:[3.6,1.65,3.4],t:[0.4,0.9,1.0],roof:true,front:true,nb:false,cut:100},
+ {id:"living",name_it:"Soggiorno",k_it:"Piano terra",d_it:"Un divano angolare in velluto a coste contro il muro in pietra originale, un tavolino basso in marmo e la porta scorrevole del bagno.",name:"Living",k:"Ground floor",d:"A corduroy corner sofa against the original stone wall, a low marble table, and the barn door to the bathroom.",photos:["sofa","barn_door","living_stair"],pin:[0.5,1.05,1.5],p:[3.6,1.65,3.4],t:[0.4,0.9,1.0],roof:true,front:true,nb:false,cut:100},
  {id:"kitchen",name_it:"Cucina",k_it:"Piano terra",d_it:"Mobili in rovere con piano di lavoro bianco e rubinetto nero, una mensola a giorno e un'isola che fa anche da tavolo per due.",name:"Kitchen",k:"Ground floor",d:"Oak cabinets with a white worktop and black tap, an open shelf, and an island that doubles as a table for two.",photos:["kitchen","living_stair"],pin:[4.8,1.3,1.0],p:[2.5,2.05,4.75],t:[4.7,1.05,0.8],roof:true,front:true,nb:false,cut:100},
  {id:"stair",name_it:"Scala e lucernario",k_it:"Doppia altezza",d_it:"Una scala a chiocciola verde menta sale nell'ambiente a doppia altezza fino al soppalco. La luce del giorno entra dal lucernario.",name:"Stair & skylight",k:"Double height",d:"A mint-green spiral stair rises through the double-height room to the loft. Daylight comes in through the skylight.",photos:["living_stair","double_height","stair_top"],pin:[4.4,1.9,3.15],p:[1.9,1.35,5.0],t:[4.4,2.8,2.6],roof:true,front:true,nb:false,cut:100},
- {id:"bathroom",name_it:"Bagno",k_it:"Piano terra",d_it:"Una doccia walk-in dietro un vetro cannettato, un mobile lavabo in rovere e uno specchio ovale retroilluminato sul muro in pietra.",name:"Shower room",k:"Ground floor",d:"A walk-in shower behind ribbed glass, an oak vanity and a backlit oval mirror on the stone wall.",photos:["bathroom","barn_door"],pin:[0.6,1.4,4.0],p:[3.2,4.3,6.2],t:[0.6,0.5,3.8],roof:false,front:true,nb:false,cut:2.4},
+ {id:"bathroom",name_it:"Bagno",k_it:"Piano terra",d_it:"Una doccia walk-in dietro un vetro cannettato, un mobile lavabo in rovere e uno specchio ovale retroilluminato sul muro in pietra.",name:"Bathroom",k:"Ground floor",d:"A walk-in shower behind ribbed glass, an oak vanity and a backlit oval mirror on the stone wall.",photos:["bathroom","barn_door"],pin:[0.6,1.4,4.0],p:[3.2,4.3,6.2],t:[0.6,0.5,3.8],roof:false,front:true,nb:false,cut:2.4},
  {id:"loft",name_it:"Camera sul soppalco",k_it:"Piano superiore",d_it:"Un letto matrimoniale sotto il tetto in legno, affacciato sul soggiorno sottostante.",name:"Loft bedroom",k:"Upstairs",d:"A double bed under the timber roof, looking out over the living room below.",photos:["loft","double_height"],pin:[2.8,3.35,1.0],p:[4.6,3.75,2.15],t:[2.4,3.0,0.5],roof:true,front:true,nb:false,cut:100}
 ];
 const DRAW={"A01": {"src": "assets/drawings/A01.svg", "w": 1026, "h": 996}, "A02": {"src": "assets/drawings/A02.svg", "w": 1026, "h": 996}, "A03": {"src": "assets/drawings/A03.svg", "w": 1260, "h": 924}, "A04": {"src": "assets/drawings/A04.svg", "w": 1128, "h": 876}, "A05": {"src": "assets/drawings/A05.svg", "w": 1110, "h": 840}, "S1": {"src": "assets/drawings/S1.png", "w": 748, "h": 902}, "S2": {"src": "assets/drawings/S2.png", "w": 776, "h": 774}, "S3": {"src": "assets/drawings/S3.png", "w": 752, "h": 750}};
 const SHEETS=[["A01","A-01","Ground floor plan","","Pianta piano terra"],["A02","A-02","Loft plan","","Pianta soppalco"],["A03","A-03","Street elevation","wide","Prospetto su strada"],["A04","A-04","Section A-A","","Sezione A-A"],["A05","A-05","Section B-B","","Sezione B-B"]];
-const SURVEY=[["S1","Existing ground floor","storeroom, 26.26 m²","Piano terra esistente","magazzino, 26,26 m²"],["S2","Existing street elevation","","Prospetto esistente",""],["S3","Planned ground floor","living-kitchen and shower room","Piano terra di progetto","soggiorno-cucina e bagno"]];
+const SURVEY=[["S1","Existing ground floor","storeroom, 26.26 m²","Piano terra esistente","magazzino, 26,26 m²"],["S2","Existing street elevation","","Prospetto esistente",""],["S3","Planned ground floor","living-kitchen and bathroom","Piano terra di progetto","soggiorno-cucina e bagno"]];
 const STREET={p:[2.2,2.8,11.6],t:[2.4,2.05,4.6],roof:true,front:true,nb:true,cut:100};
 const OVERVIEW={p:[1.6,8.4,12.2],t:[2.56,1.0,2.6],roof:false,front:false,nb:true,cut:100};
 
@@ -461,13 +459,13 @@ const IT={navHouse:"La casa",navProject:"Progetto",book:"Prenota",heroH:"Un rifu
  heroP:"Un unico ambiente restaurato con soppalco per dormire e un tavolino sulla strada. Tocca una stanza nel modello per vederla com'è davvero.",
  back:"← Indietro",day:"Giorno",eve:"Sera",nextRoom:"Stanza successiva →",
  leadH:"Muri originali in pietra, un tetto in legno e luce dall'alto.",
- leadP:"La casa è pensata come un open space accogliente e funzionale, che offre comfort nella semplicità:",l1:"Cucina completamente attrezzata per preparare piatti semplici con ingredienti locali",l2:"Piccolo angolo living con sedute e dettagli dal design essenziale",l3:"Bagno privato con finiture curate e doccia walk-in",l4:"Sul soppalco, un’accogliente zona notte con letto matrimoniale",l5:"Piccolo spazio esterno per rilassarsi e godersi il borgo e la luce naturale",amH:"Servizi",a1:"Wi-Fi",a2:"Cucina completamente attrezzata (piano cottura, frigorifero, forno, utensili)",a3:"Biancheria da letto e asciugamani",a4:"Aria condizionata/riscaldamento",a5:"Luce naturale dal lucernario e dalla tradizionale porta a due ante orizzontali",a6:"Parcheggio gratuito in strada",a7:"Prodotti locali di benvenuto (su richiesta)",igA:"Pagliaroom su Instagram",seeProj:"Vedi il progetto",
+ leadP:"Pensata come un open space accogliente e funzionale, la casa unisce semplicità rustica e tutti i comfort necessari. Una cucina completamente attrezzata per preparare piatti con ingredienti locali, un piccolo angolo living e un bagno privato con doccia walk-in. Il soppalco ospita un accogliente letto matrimoniale, mentre un piccolo spazio esterno invita a rallentare, godersi la luce naturale e l’atmosfera tranquilla del borgo.",l1:"Cucina completamente attrezzata per preparare piatti semplici con ingredienti locali",l2:"Piccolo angolo living con sedute e dettagli dal design essenziale",l3:"Bagno privato con finiture curate e doccia walk-in",l4:"Sul soppalco, un’accogliente zona notte con letto matrimoniale",l5:"Piccolo spazio esterno per rilassarsi e godersi il borgo e la luce naturale",amH:"Servizi",a1:"Wi-Fi",a2:"Cucina completamente attrezzata (piano cottura, frigorifero, forno, utensili)",a3:"Biancheria da letto e asciugamani",a8:"Bagnoschiuma e asciugacapelli",a4:"Aria condizionata/riscaldamento",a5:"Luce naturale dal lucernario e dalla tradizionale porta a due ante orizzontali",a6:"Parcheggio gratuito in strada",a7:"Prodotti locali di benvenuto (su richiesta)",igA:"Pagliaroom su Instagram",seeProj:"Vedi il progetto",
  f1:"ospiti, un letto matrimoniale",f2:"piano terra, più un soppalco",f3:"bagno con doccia",f4b:"Cucina",f4:"lavello, piano cottura e isola-tavolo",
  reqH:"Richiedi le tue date",reqP:"L'host conferma disponibilità e prezzo prima di qualsiasi prenotazione.",
- checkin:"Arrivo",soundOn:"Audio attivo",sendMail:"Invia per email",mailAlt:"Se l’app di posta non si apre, copia la richiesta e inviala a {c}.",nextPhoto:"Foto {i} di {n}. Mostra la foto successiva",soundOff:"Audio spento",playRec:"Metti il disco",stopRec:"Ferma il disco",addDate:"Aggiungi data",prevM:"Mese precedente",nextM:"Mese successivo",checkout:"Partenza",guests:"Ospiti",name:"Nome",contact:"Email o telefono",msgL:"Messaggio (facoltativo)",msgPh:"Orario di arrivo, domande…",
+ checkin:"Arrivo",soundOn:"Audio attivo",startTour:"Fai il tour",sendMail:"Invia per email",mailAlt:"Se l’app di posta non si apre, copia la richiesta e inviala a {c}.",nextPhoto:"Foto {i} di {n}. Mostra la foto successiva",soundOff:"Audio spento",playRec:"Metti il disco",stopRec:"Ferma il disco",addDate:"Aggiungi data",prevM:"Mese precedente",nextM:"Mese successivo",checkout:"Partenza",guests:"Ospiti",name:"Nome",contact:"Email o telefono",msgL:"Messaggio (facoltativo)",msgPh:"Orario di arrivo, domande…",
  prep:"Prepara la richiesta",copyReq:"Copia la richiesta",edit:"Modifica",gtk:"Da sapere",g1:"Fino a 2 ospiti.",g2:"Il letto è nel soppalco, raggiungibile con una scala a chiocciola.",g3:"Aria condizionata su entrambi i livelli.",
  mapH:"Dintorni di Pagliaroom",mapNote:"Il cerchio indica la zona di Pagliaroom, non l'indirizzo esatto. Le distanze sono in linea d'aria dalla casa.",
- pTitle:"Il progetto",pH:"Da magazzino al piano strada a casa per due.",
+ pTitle:"Abbiamo trasformato un’antica «pagliarola» in pietra",pSub:"Un tempo usata per conservare la paglia, in un rifugio intimo che celebra il lusso discreto, l’artigianato siciliano e un legame profondo con la natura circostante.",pH:"Da magazzino al piano strada a casa per due.",
  pP:"Ristrutturata con cura per preservarne l’anima autentica, la casa unisce materiali tradizionali e un design semplice e raffinato, creando un’atmosfera calda e serena. È il luogo ideale per chi cerca natura, silenzio e un’esperienza davvero locale, lontano dal turismo di massa.",
  pf1b:"26,26 m²",pf1:"piano terra, netti",pf2b:"5,12 × 5,10 m",pf2:"interno",pf3b:"5,40 / 4,15 m",pf3:"altezza del tetto, retro / strada",pf4b:"0,62 m",pf4:"muri in pietra",
  survH:"Prima della ristrutturazione",survNote:"Disegni ricavati dal rilievo in scala 1:50, misure in metri. Alcune quote sono misurate sui disegni o ipotizzate.",
@@ -482,7 +480,7 @@ const IT={navHouse:"La casa",navProject:"Progetto",book:"Prenota",heroH:"Un rifu
  tour:"Tour",stopTour:"Ferma il tour",playTour:"Rivedi il tour",outside:"Esterno",inside:"Interno",err3d:"Il modello 3D non si avvia in questo browser. Usa i pulsanti delle stanze qui sotto per vedere le foto."};
 const EN={hint:"Drag to turn · scroll to zoom",seeInside:"See inside",streetView:"← Street view",photoN:"Open photo {i} of {n}",photo:"photo",openFull:"Open {t} full screen",
  show:"Show {n}",inArea:"in this area",east:"east",fromP:"from Pagliaroom",pick:"Tap a place on the map, or pick one:",allPlaces:"← All places",gmaps:"Photos and directions on Google Maps ↗",
- night:"night",nights:"nights",soundOn:"Sound on",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
+ night:"night",nights:"nights",soundOn:"Sound on",startTour:"Take the tour",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
  e1:"Choose a check-in and a check-out date.",e2:"Check-out must be after check-in.",e3:"Add your name.",e4:"Add an email or phone number so the host can reply.",
  rq:"Booking request",rqDates:"Dates",to:"to",rqGuests:"Guests",rqName:"Name",rqContact:"Contact",rqMsg:"Message",
  ready:"Your request is ready. Copy it and send it to the host. Nothing is booked until the host confirms.",readyTo:"Your request is ready. Send it by email to {c}. Nothing is booked until the host confirms.",
@@ -805,9 +803,10 @@ function initModel(){
    const holed=(x0,x1,y0,y1,z0,z1,mat)=>{box(x0,y0,z0,sx0,y1,z1,mat,roofG);box(sx1,y0,z0,x1,y1,z1,mat,roofG);box(sx0,y0,z0,sx1,y1,sz0,mat,roofG);box(sx0,y0,sz1,sx1,y1,z1,mat,roofG);};
    holed(-3.31,3.31,-0.10,0,-Lr/2,Lr/2,M.tile);
    holed(-3.18,3.18,-0.14,-0.10,-Lr/2,Lr/2-0.05,M.pine);
-   box(sx0-.05,-0.14,sz0-.05,sx1+.05,0.10,sz0,M.grey,roofG);box(sx0-.05,-0.14,sz1,sx1+.05,0.10,sz1+.05,M.grey,roofG);
-   box(sx0-.05,-0.14,sz0,sx0,0.10,sz1,M.grey,roofG);box(sx1,-0.14,sz0,sx1+.05,0.10,sz1,M.grey,roofG);
-   box(sx0-.05,0.10,sz0-.05,sx1+.05,0.115,sz1+.05,M.glass,roofG).castShadow=false;
+   {const e=0.004,t=0.045;// frame 4 mm inside the opening, so no face shares a plane with the tiles or boards
+    box(sx0+e,-0.135,sz0+e,sx1-e,0.10,sz0+e+t,M.grey,roofG);box(sx0+e,-0.135,sz1-e-t,sx1-e,0.10,sz1-e,M.grey,roofG);
+    box(sx0+e,-0.135,sz0+e+t,sx0+e+t,0.10,sz1-e-t,M.grey,roofG);box(sx1-e-t,-0.135,sz0+e+t,sx1-e,0.10,sz1-e-t,M.grey,roofG);
+    const g=box(sx0+e+t+.002,0.07,sz0+e+t+.002,sx1-e-t-.002,0.082,sz1-e-t-.002,M.glass,roofG);g.castShadow=false;g.renderOrder=2;}
    BEAML.forEach(l=>box(-3.18,-0.30,l-0.06,3.18,-0.14,l+0.06,M.pine,roofG));}
   /* bath */
   {const sh=new THREE.Shape();sh.moveTo(2.46,0);sh.lineTo(3.45,0);sh.lineTo(3.45,2.15);sh.lineTo(4.25,2.15);sh.lineTo(4.25,0);sh.lineTo(D,0);sh.lineTo(D,ceil(D));sh.lineTo(2.46,ceil(2.46));sh.closePath();
@@ -835,10 +834,12 @@ function initModel(){
   {const mg=new THREE.Mesh(new THREE.CircleGeometry(0.5,48),M.lamp);mg.rotation.y=Math.PI/2;mg.position.set(0.006,1.55,3.80);mg.scale.set(0.36,0.62,1);house.add(mg);
    const mm=new THREE.Mesh(new THREE.CircleGeometry(0.5,48),M.mirror);mm.rotation.y=Math.PI/2;mm.position.set(0.012,1.55,3.80);mm.scale.set(0.33,0.58,1);house.add(mm);}
   box(0.36,0.25,4.94,0.82,0.80,5.10,M.white);{const b=cyl(0.17,0.38,0.59,0.40,4.70,M.white);b.scale.z=1.4;}
-  box(1.29,0.02,2.70,1.33,2.15,3.50,M.frost);
-  [[2.70,2.74],[3.46,3.50]].forEach(([a,b])=>box(1.28,0.02,a,1.34,2.15,b,M.black));
-  [0.02,0.72,1.44,2.11].forEach(y=>box(1.28,y,2.70,1.34,y+0.04,3.50,M.black));
-  box(1.34,2.22,2.60,1.37,2.26,4.35,M.black);
+  {const x0=1.338,x1=1.368;
+   [[2.70,2.74],[3.46,3.50]].forEach(([a,b])=>box(x0,0.02,a,x1,2.15,b,M.black));
+   [[0.02,0.06],[0.70,0.74],[1.42,1.46],[2.11,2.15]].forEach(([a,b])=>box(x0,a,2.74,x1,b,3.46,M.black));
+   [[0.06,0.70],[0.74,1.42],[1.46,2.11]].forEach(([a,b])=>{const f=box(x0+.011,a,2.74,x1-.011,b,3.46,M.frost);f.renderOrder=2;});
+   box(1.372,2.20,2.60,1.398,2.24,4.35,M.black);
+   [2.85,3.35].forEach(z=>box(1.36,2.15,z-.01,1.385,2.21,z+.01,M.black));}
   box(1.27,0,3.40,1.33,2.20,3.45,M.pine);box(1.27,0,4.25,1.33,2.20,4.30,M.pine);box(1.27,2.15,3.40,1.33,2.20,4.30,M.pine);
   /* kitchen */
   box(4.50,0.10,0,W,0.86,2.30,M.oak);box(4.53,0,0.02,W,0.10,2.30,M.black);box(4.48,0.86,0,W,0.90,2.30,M.white);
@@ -1118,14 +1119,14 @@ var tour={on:false,i:0,tm:null,step:null,t0:0,ms:0};
 const TOUR=[{v:"inside",ms:3600},...["living","kitchen","stair","bathroom","loft","terrace"].map(id=>({a:id,ms:5200}))];
 function tourChip(){const b=$("tour");b.hidden=!model;b.textContent="";
   if(tour.on){b.append(tt("stopTour")+" ");const bar=document.createElement("span");bar.className="bar";bar.appendChild(document.createElement("i"));b.appendChild(bar);}
-  else b.textContent="▶ "+tt("playTour");}
+  else b.textContent="▶ "+tt(tour.ran?"playTour":"startTour");}
 function tourCaption(){const s=tour.step;if(!s)return;$("hint").textContent=`${tt("tour")} · ${s.a?tr(AREAS.find(x=>x.id===s.a),"name"):(s.v==="inside"?tt("inside"):tt("outside"))}`;}
 function tourStep(){if(!tour.on)return;if(tour.i>=TOUR.length){endTour(false);return;}
   const s=TOUR[tour.i++];tour.step=s;tour.t0=performance.now();tour.ms=s.ms+1300;
   if(s.a){const a=AREAS.find(x=>x.id===s.a);cur=a;fillSheet(a);model.fly(a);}else{hideSheet();model.fly(s.v);}
   tourCaption();
   tour.tm=setTimeout(tourStep,tour.ms);}
-function startTour(){if(!model)return;if(cur){cur=null;$("sheet").classList.remove("open");$("sheet").setAttribute("aria-hidden","true");}
+function startTour(){if(!model)return;tour.ran=true;if(cur){cur=null;$("sheet").classList.remove("open");$("sheet").setAttribute("aria-hidden","true");}
   tour.on=true;tour.i=0;$("inside").hidden=true;$("back").hidden=true;tourChip();tourStep();model.tourRecord();}
 function endTour(openRoom,silent){if(!tour.on)return;tour.on=false;clearTimeout(tour.tm);const s=tour.step;tourChip();
   if(silent)return;
@@ -1153,7 +1154,7 @@ function applyLang(l){LANG=l;try{localStorage.setItem("pagliaroom-lang",l);}catc
 document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>applyLang(b.dataset.lang));
 try{model=initModel();}catch(e){console.error(e);model=null;$("stage").innerHTML='<div class="err"></div>';$("stage").firstChild.textContent=tt("err3d");}
 applyLang(LANG);route();
-if(model&&!still&&location.hash!=="#project")setTimeout(()=>{if(!touched&&!cur&&location.hash!=="#project")startTour();},2400);
+if(model)tourChip();
 </script>
 
 </body>
