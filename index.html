@@ -114,6 +114,16 @@ section.block{padding-block:72px 0}
 #survey{grid-template-columns:repeat(4,minmax(0,1fr))}
 #survey figure.photo{grid-row:span 1}
 footer.foot .fr{display:flex;align-items:center;gap:14px}
+.credits{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:6px;font-size:15px}
+.credits p{margin:0;color:var(--muted)}.credits a,.credits b{color:var(--ink);font-weight:500}
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.offer article{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--surface)}
+.offer h3{margin:0 0 8px;font-weight:400;font-size:22px}.offer p{margin:0;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;counter-reset:st}
+.steps li{counter-increment:st;display:grid;gap:4px;padding-top:12px;border-top:1px solid var(--ink);font-size:14.5px}
+.steps li::before{content:counter(st,decimal-leading-zero);font-size:13px;color:var(--accent);font-weight:500}
+.steps b{font-weight:500;font-size:16px}.steps span{color:var(--muted)}
+.ycontact{margin-top:48px;max-width:720px}
 footer.foot .ig{display:grid;place-items:center;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;color:var(--ink);flex:none}
 footer.foot .ig:hover{border-color:var(--ink)}
 footer.foot .ig svg{width:20px;height:20px}
@@ -282,6 +292,8 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   .rooms{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;padding-block:12px 4px}
   .rooms::-webkit-scrollbar{display:none}
   .rooms button{flex:none}
+  .offer{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:12px}
   .amen{grid-template-columns:1fr 1fr;gap:18px 14px}
   .amen li{font-size:13.5px;grid-template-columns:24px minmax(0,1fr);gap:9px;overflow-wrap:anywhere}
   .amen svg{width:22px;height:22px}
@@ -306,7 +318,7 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
 
 <header class="top"><div class="wrap">
   <a class="brand" href="#house"><b>Pagliaroom</b></a>
-  <nav class="navl" aria-label="Pages"><span class="links"><a class="t" href="#house" data-page="house" data-i18n="navHouse">The house</a><a class="t" href="#project" data-page="project" data-i18n="navProject">Project</a></span><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="it" aria-pressed="false">IT</button></div><a class="btn" href="#book" data-i18n="book">Book a stay</a></nav>
+  <nav class="navl" aria-label="Pages"><span class="links"><a class="t" href="#house" data-page="house" data-i18n="navHouse">The house</a><a class="t" href="#project" data-page="project" data-i18n="navProject">The project</a><a class="t" href="#yours" data-page="yours" data-i18n="navYours">Your Pagliaroom</a></span><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="it" aria-pressed="false">IT</button></div><a class="btn" href="#book" data-i18n="book">Book a stay</a></nav>
 </div></header>
 
 <main id="house">
@@ -408,6 +420,37 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   </div>
   <div class="sheets" id="sheets"></div>
   <p class="note" style="margin-top:24px" data-i18n="survNote">Drawings redrawn from the measured survey at 1:50, dimensions in metres. Some levels are scaled from the drawings or assumed.</p>
+  <div class="credits">
+    <p><span data-i18n="cr1">Project and renovation with the guidance and support of</span> <a href="https://www.architettodanieletraina.it/" target="_blank" rel="noopener">Studio Architetto Daniele Traina ↗</a></p>
+    <p><span data-i18n="cr2">Kitchen ideation by interior designer</span> <b>Kaja Mesaric</b></p>
+  </div>
+</div></section>
+
+<section id="yours" hidden><div class="wrap">
+  <div class="intro pintro"><h1 data-i18n="yH">Your Pagliaroom</h1><p data-i18n="yP">Dreaming of your own little house in Sicily? We have been through it: finding an old stone building, getting it surveyed, designed and renovated. We can guide you through every step, or manage the project for you.</p></div>
+  <div class="offer">
+    <article><h3 data-i18n="o1h">Guidance</h3><p data-i18n="o1p">For those who want to do it themselves, with someone at their side. We share what we learned: where to start, which questions to ask, who to talk to, and what to watch out for along the way.</p></article>
+    <article><h3 data-i18n="o2h">Project management</h3><p data-i18n="o2p">For those who live far away or have little time. We follow the project for you: we coordinate the architect, the builders and the craftsmen, keep an eye on time and budget, and keep you updated.</p></article>
+  </div>
+  <h3 class="sub" data-i18n="stH">How it can work</h3>
+  <ol class="steps">
+    <li><b data-i18n="s1h">Your idea</b><span data-i18n="s1p">Tell us what you are looking for: the area, the kind of house, how you want to use it, your budget.</span></li>
+    <li><b data-i18n="s2h">The right place</b><span data-i18n="s2p">We help you look at buildings with a practical eye, before you commit.</span></li>
+    <li><b data-i18n="s3h">Design</b><span data-i18n="s3p">Survey and project with local professionals who know old stone buildings.</span></li>
+    <li><b data-i18n="s4h">Renovation</b><span data-i18n="s4p">From the first works to the last detail, with the craftsmen of the area.</span></li>
+    <li><b data-i18n="s5h">Your house</b><span data-i18n="s5p">The keys, and a place that is truly yours to live in or to host guests.</span></li>
+  </ol>
+  <form class="req ycontact" id="yreq" novalidate aria-labelledby="yreq-h">
+    <div class="fh"><h3 id="yreq-h" data-i18n="yfH">Tell us about your project</h3><p data-i18n="yfP">No commitment: a first conversation to understand what you have in mind.</p></div>
+    <div class="row">
+      <label class="f" for="yname"><span data-i18n="name">Name</span><input id="yname" autocomplete="name"></label>
+      <label class="f" for="ycontact"><span data-i18n="contact">Email or phone</span><input id="ycontact" autocomplete="email"></label>
+    </div>
+    <label class="f" for="yhelp"><span data-i18n="yNeed">What would you like help with?</span><select id="yhelp"><option value="g" data-i18n="o1h">Guidance</option><option value="pm" data-i18n="o2h">Project management</option><option value="ns" data-i18n="yNs">Not sure yet</option></select></label>
+    <label class="f" for="ymsg"><span data-i18n="yMsg">Your idea</span><textarea id="ymsg" data-i18n-ph="yMsgPh" placeholder="Where in Sicily, what kind of house, your timing…"></textarea></label>
+    <p class="fieldErr" id="yerr" hidden></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn" type="submit" data-i18n="ySend">Write to us</button><span class="note" id="ynote"></span></div>
+  </form>
 </div></section>
 
 <footer class="foot"><div class="wrap"><span>Pagliaroom © 2027</span><span class="fr"><span data-i18n="foot">A place designed to slow down, breathe, and experience the most authentic side of Sicily</span><a class="ig" href="https://www.instagram.com/pagliaroom/" target="_blank" rel="noopener" aria-label="Pagliaroom on Instagram" data-i18n-aria="igA"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg></a></span></div></footer>
@@ -455,14 +498,21 @@ const OVERVIEW={p:[1.6,8.4,12.2],t:[2.56,1.0,2.6],roof:false,front:false,nb:true
 /* ---- sheet + lightbox ---- */
 const $=id=>document.getElementById(id);
 /* ---- language ---- */
-const IT={navHouse:"La casa",navProject:"Progetto",book:"Prenota",heroH:"Un rifugio da sogno nella Sicilia rurale",heroP1:"Abbiamo trasformato un’antica «pagliarola» in pietra, un tempo usata per conservare la paglia, in un rifugio intimo che celebra il lusso discreto, l’artigianato siciliano e un legame profondo con la natura circostante.",heroP2:"Soggiorna nella nostra Pagliaroom e immergiti nei sapori, nelle tradizioni e nei paesaggi senza tempo di Santo Stefano Quisquina.",
+const IT={navHouse:"La casa",navProject:"Il progetto",navYours:"La tua Pagliaroom",book:"Prenota",heroH:"Un rifugio da sogno nella Sicilia rurale",heroP1:"Abbiamo trasformato un’antica «pagliarola» in pietra, un tempo usata per conservare la paglia, in un rifugio intimo che celebra il lusso discreto, l’artigianato siciliano e un legame profondo con la natura circostante.",heroP2:"Soggiorna nella nostra Pagliaroom e immergiti nei sapori, nelle tradizioni e nei paesaggi senza tempo di Santo Stefano Quisquina.",
  heroP:"Un unico ambiente restaurato con soppalco per dormire e un tavolino sulla strada. Tocca una stanza nel modello per vederla com'è davvero.",
  back:"← Indietro",day:"Giorno",eve:"Sera",nextRoom:"Stanza successiva →",
  leadH:"Muri originali in pietra, un tetto in legno e luce dall'alto.",
  leadP:"Pensata come un open space accogliente e funzionale, la casa unisce semplicità rustica e tutti i comfort necessari. Una cucina completamente attrezzata per preparare piatti con ingredienti locali, un piccolo angolo living e un bagno privato con doccia walk-in. Il soppalco ospita un accogliente letto matrimoniale, mentre un piccolo spazio esterno invita a rallentare, godersi la luce naturale e l’atmosfera tranquilla del borgo.",l1:"Cucina completamente attrezzata per preparare piatti semplici con ingredienti locali",l2:"Piccolo angolo living con sedute e dettagli dal design essenziale",l3:"Bagno privato con finiture curate e doccia walk-in",l4:"Sul soppalco, un’accogliente zona notte con letto matrimoniale",l5:"Piccolo spazio esterno per rilassarsi e godersi il borgo e la luce naturale",amH:"Servizi",a1:"Wi-Fi",a2:"Cucina completamente attrezzata (piano cottura, frigorifero, forno, utensili)",a3:"Biancheria da letto e asciugamani",a8:"Bagnoschiuma e asciugacapelli",a4:"Aria condizionata/riscaldamento",a5:"Luce naturale dal lucernario e dalla tradizionale porta a due ante orizzontali",a6:"Parcheggio gratuito in strada",a7:"Prodotti locali di benvenuto (su richiesta)",igA:"Pagliaroom su Instagram",seeProj:"Vedi il progetto",
  f1:"ospiti, un letto matrimoniale",f2:"piano terra, più un soppalco",f3:"bagno con doccia",f4b:"Cucina",f4:"lavello, piano cottura e isola-tavolo",
  reqH:"Richiedi le tue date",reqP:"L'host conferma disponibilità e prezzo prima di qualsiasi prenotazione.",
- checkin:"Arrivo",soundOn:"Audio attivo",startTour:"Fai il tour",sendMail:"Invia per email",mailAlt:"Se l’app di posta non si apre, copia la richiesta e inviala a {c}.",nextPhoto:"Foto {i} di {n}. Mostra la foto successiva",soundOff:"Audio spento",playRec:"Metti il disco",stopRec:"Ferma il disco",addDate:"Aggiungi data",prevM:"Mese precedente",nextM:"Mese successivo",checkout:"Partenza",guests:"Ospiti",name:"Nome",contact:"Email o telefono",msgL:"Messaggio (facoltativo)",msgPh:"Orario di arrivo, domande…",
+ checkin:"Arrivo",soundOn:"Audio attivo",ySubj:"La tua Pagliaroom: una piccola casa in Sicilia",
+ cr1:"Progetto e ristrutturazione con la guida e il supporto dello",cr2:"Ideazione della cucina della interior designer",
+ yH:"La tua Pagliaroom",yP:"Sogni una piccola casa tutta tua in Sicilia? Ci siamo passati: trovare un vecchio edificio in pietra, farlo rilevare, progettare e ristrutturare. Possiamo guidarti in ogni passo, oppure gestire il progetto per te.",
+ o1h:"Guida",o1p:"Per chi vuole fare da sé, con qualcuno al proprio fianco. Condividiamo ciò che abbiamo imparato: da dove iniziare, quali domande fare, a chi rivolgersi e a cosa fare attenzione lungo il percorso.",
+ o2h:"Gestione del progetto",o2p:"Per chi vive lontano o ha poco tempo. Seguiamo il progetto per te: coordiniamo architetto, impresa e artigiani, teniamo d’occhio tempi e budget e ti teniamo aggiornato.",
+ stH:"Come può funzionare",s1h:"La tua idea",s1p:"Raccontaci cosa cerchi: la zona, il tipo di casa, come vuoi viverla, il tuo budget.",s2h:"Il posto giusto",s2p:"Ti aiutiamo a valutare gli edifici con occhio pratico, prima di impegnarti.",
+ s3h:"Progetto",s3p:"Rilievo e progetto con professionisti locali che conoscono gli edifici in pietra.",s4h:"Ristrutturazione",s4p:"Dai primi lavori all’ultimo dettaglio, con gli artigiani del territorio.",s5h:"La tua casa",s5p:"Le chiavi, e un luogo davvero tuo, da vivere o in cui accogliere ospiti.",
+ yfH:"Raccontaci il tuo progetto",yfP:"Senza impegno: una prima chiacchierata per capire cosa hai in mente.",yNeed:"In cosa ti possiamo aiutare?",yNs:"Non lo so ancora",yMsg:"La tua idea",yMsgPh:"Dove in Sicilia, che tipo di casa, i tuoi tempi…",ySend:"Scrivici",startTour:"Fai il tour",sendMail:"Invia per email",mailAlt:"Se l’app di posta non si apre, copia la richiesta e inviala a {c}.",nextPhoto:"Foto {i} di {n}. Mostra la foto successiva",soundOff:"Audio spento",playRec:"Metti il disco",stopRec:"Ferma il disco",addDate:"Aggiungi data",prevM:"Mese precedente",nextM:"Mese successivo",checkout:"Partenza",guests:"Ospiti",name:"Nome",contact:"Email o telefono",msgL:"Messaggio (facoltativo)",msgPh:"Orario di arrivo, domande…",
  prep:"Prepara la richiesta",copyReq:"Copia la richiesta",edit:"Modifica",gtk:"Da sapere",g1:"Fino a 2 ospiti.",g2:"Il letto è nel soppalco, raggiungibile con una scala a chiocciola.",g3:"Aria condizionata su entrambi i livelli.",
  mapH:"Dintorni di Pagliaroom",mapNote:"Il cerchio indica la zona di Pagliaroom, non l'indirizzo esatto. Le distanze sono in linea d'aria dalla casa.",
  pTitle:"Abbiamo trasformato un’antica «pagliarola» in pietra",pSub:"Un tempo usata per conservare la paglia, in un rifugio intimo che celebra il lusso discreto, l’artigianato siciliano e un legame profondo con la natura circostante.",pH:"Da magazzino al piano strada a casa per due.",
@@ -480,7 +530,7 @@ const IT={navHouse:"La casa",navProject:"Progetto",book:"Prenota",heroH:"Un rifu
  tour:"Tour",stopTour:"Ferma il tour",playTour:"Rivedi il tour",outside:"Esterno",inside:"Interno",err3d:"Il modello 3D non si avvia in questo browser. Usa i pulsanti delle stanze qui sotto per vedere le foto."};
 const EN={hint:"Drag to turn · scroll to zoom",seeInside:"See inside",streetView:"← Street view",photoN:"Open photo {i} of {n}",photo:"photo",openFull:"Open {t} full screen",
  show:"Show {n}",inArea:"in this area",east:"east",fromP:"from Pagliaroom",pick:"Tap a place on the map, or pick one:",allPlaces:"← All places",gmaps:"Photos and directions on Google Maps ↗",
- night:"night",nights:"nights",soundOn:"Sound on",startTour:"Take the tour",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
+ night:"night",nights:"nights",soundOn:"Sound on",ySubj:"Your Pagliaroom: a little house in Sicily",startTour:"Take the tour",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
  e1:"Choose a check-in and a check-out date.",e2:"Check-out must be after check-in.",e3:"Add your name.",e4:"Add an email or phone number so the host can reply.",
  rq:"Booking request",rqDates:"Dates",to:"to",rqGuests:"Guests",rqName:"Name",rqContact:"Contact",rqMsg:"Message",
  ready:"Your request is ready. Copy it and send it to the host. Nothing is booked until the host confirms.",readyTo:"Your request is ready. Send it by email to {c}. Nothing is booked until the host confirms.",
@@ -545,9 +595,9 @@ function buildSheets(){$("sheets").textContent="";$("survey").textContent="";con
   SURVEY.forEach(([k,t,sub,ti,subi])=>sheetCard($("survey"),k,it?ti:t,it?subi:sub,"",SURVEY.map(x=>x[0]),tt("survey")));}
 buildSheets();
 /* ---- pages ---- */
-function route(){const h=location.hash.slice(1);const proj=h==="project";
-  $("house").hidden=proj;$("project").hidden=!proj;
-  document.querySelectorAll(".navl a.t").forEach(a=>a.setAttribute("aria-current",(a.dataset.page===(proj?"project":"house"))?"page":"false"));
+function route(){const h=location.hash.slice(1);const pg=h==="project"||h==="yours"?h:"house";const proj=pg!=="house";
+  $("house").hidden=proj;$("project").hidden=pg!=="project";$("yours").hidden=pg!=="yours";
+  document.querySelectorAll(".navl a.t").forEach(a=>a.setAttribute("aria-current",a.dataset.page===pg?"page":"false"));
   if(model)model.active(!proj);if(proj&&tour.on)endTour(false);
   if(proj)scrollTo(0,0);else if(h==="book")$("book").scrollIntoView();else if(h==="house")scrollTo(0,0);}
 addEventListener("hashchange",route);
@@ -621,6 +671,12 @@ function showPoi(id){const box=$("poi");poiId=id;const p=POIS.find(q=>q.id===id)
   box.querySelector("h4").textContent=p.name;box.querySelector(".back2").textContent=tt("allPlaces");box.querySelector(".dist").textContent=`${fmtD(p.m)} ${tt("fromP")}${p.road?" · "+tr(p,"road"):""}`;
   box.querySelector("p").textContent=tr(p,"d");box.querySelector("a").href=p.g;box.querySelector("a").textContent=tt("gmaps");box.querySelector(".back2").onclick=()=>showPoi(null);}
 showPoi(null);
+/* ---- Your Pagliaroom: enquiry by email ---- */
+$("yreq").addEventListener("submit",e=>{e.preventDefault();const n=$("yname").value.trim(),c=$("ycontact").value.trim(),err=$("yerr");err.hidden=true;
+  if(!n||!c){err.textContent=!n?tt("e3"):tt("e4");err.hidden=false;return;}
+  const body=`${tt("rqName")}: ${n}\n${tt("rqContact")}: ${c}\n${tt("yNeed")} ${$("yhelp").selectedOptions[0].textContent}\n\n${$("ymsg").value.trim()}`;
+  const url=`mailto:${HOST.contact}?subject=${encodeURIComponent(tt("ySubj"))}&body=${encodeURIComponent(body)}`;
+  $("ynote").textContent=tt("mailAlt",{c:HOST.contact});location.href=url;});
 /* ---- booking request ---- */
 const fmt=d=>d.toLocaleDateString(LANG==="it"?"it-IT":"en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"});
 const today=new Date();today.setHours(0,0,0,0);const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);

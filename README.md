@@ -16,7 +16,8 @@ Visitors explore the house as an interactive 3D model, open real photos of each 
   - Date picker that only allows dates from today onwards.
   - Prepares an email to `info@pagliaroom.com` with the guest's details.
 - **Around Pagliaroom**: minimal map from OpenStreetMap data with five nearby places, their descriptions and distances. It shows only the area of the house, never the exact address.
-- **Project**: architect drawings (plans, elevation, sections) and the original survey.
+- **The project**: before-the-renovation photo and survey, architect drawings, and credits.
+- **Your Pagliaroom**: guidance and project management for people who want their own little house in Sicily, with an enquiry form that prepares an email.
 - **English / Italian**: the site opens in Italian for Italian browsers and remembers the visitor's choice.
 
 ## Files
