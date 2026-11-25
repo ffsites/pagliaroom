@@ -205,9 +205,6 @@ footer.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
   .intro{grid-template-columns:1fr}
   .facts{grid-template-columns:1fr 1fr;row-gap:18px}
   .lead,.book{grid-template-columns:1fr}
-  .stagebox{height:72vh;min-height:420px}
-  .sheet{left:8px;right:8px;top:auto;bottom:8px;width:auto;height:62%;transform:translateY(calc(100% + 24px))}
-  .stagebox:has(.sheet.open) .hud.br{right:14px;top:14px;bottom:auto}
   .stagebox:has(.sheet.open) .hud.tl{display:none}
   .sheet.open{transform:none}
   .pin .lab{font-size:12px;padding:3px 8px}
@@ -215,6 +212,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:
 @media (max-width:420px){.row{grid-template-columns:1fr}}
 /* header nav + project page */
 .navl{display:flex;align-items:center;gap:4px 22px;flex-wrap:wrap;justify-content:flex-end}
+.navl .links{display:inline-flex;gap:22px}
 .navl a.t{text-decoration:none;font-size:15px;color:var(--muted);padding-block:6px;border-bottom:1px solid transparent}
 .navl a.t[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ink)}
 .navl a.t:hover{color:var(--ink)}
@@ -237,11 +235,51 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
 .lb.paper .bar{color:#333}.lb.paper button{background:rgba(0,0,0,.07);color:#1D1D1B}
 @media (max-width:860px){.sheets,.survey{grid-template-columns:1fr}.pfacts{grid-template-columns:1fr 1fr;row-gap:18px}.pfacts b,.facts b{font-size:23px}.navl a.t{font-size:14px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---- phones ---- */
+@media (max-width:860px){
+  header.top{padding-block:14px 10px}
+  .stagebox{height:min(64vh,560px);min-height:400px;border-radius:14px}
+  .hud.tl{left:10px;top:10px;max-width:calc(100% - 150px)}
+  .hint{font-size:11px;line-height:1.3}
+  .hud.bl{left:10px;bottom:10px}
+  .hud.br,.stagebox:has(.sheet.open) .hud.br{right:10px;top:10px;bottom:auto}
+  .stagebox:has(.sheet.open) .hud.bl{top:10px;bottom:auto}
+  #snd,#t-day,#t-eve{font-size:0;width:34px;height:34px;padding:0;display:grid;place-items:center}
+  #snd::before,#t-day::before,#t-eve::before{content:"";width:17px;height:17px;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+  #t-day{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='3.6' fill='none' stroke='black' stroke-width='1.8'/%3E%3Cpath d='M10 1.5v2.5M10 16v2.5M1.5 10H4M16 10h2.5M4 4l1.8 1.8M14.2 14.2L16 16M4 16l1.8-1.8M14.2 5.8L16 4' stroke='black' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E")}#t-eve{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M15.5 12.6A6.5 6.5 0 0 1 7.4 4.5a6.5 6.5 0 1 0 8.1 8.1z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E")}#snd{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 8h3l4-3.5v11L6 12H3z' fill='black'/%3E%3Cpath d='M13 7.2a4 4 0 0 1 0 5.6M15.2 5a7 7 0 0 1 0 10' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E")}#snd[aria-pressed="false"]{--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M3 8h3l4-3.5v11L6 12H3z' fill='black'/%3E%3Cpath d='M13 7.5l5 5M18 7.5l-5 5' stroke='black' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E")}
+  /* room card: photo left, text right, buttons below */
+  .sheet{left:8px;right:8px;top:auto;bottom:8px;width:auto;height:auto;max-height:calc(100% - 64px);display:grid;grid-template-columns:40% minmax(0,1fr);grid-template-rows:auto 1fr auto;grid-template-areas:"gal head" "gal desc" "foot foot";transform:translateY(calc(100% + 24px))}
+  .sheet header{grid-area:head;padding:12px 12px 4px 12px;gap:8px}
+  .sheet h2{font-size:19px}
+  .sheet .x{width:30px;height:30px;font-size:16px}
+  .sheet .desc{grid-area:desc;padding:0 12px 10px;font-size:13px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+  .gallery{grid-area:gal;padding:12px 0 12px 12px;overflow:hidden}
+  .gallery img{aspect-ratio:3/4;max-height:none}
+  .sheet footer{grid-area:foot;padding:10px 12px;flex-wrap:nowrap}
+  .sheet footer .btn{padding:8px 14px;font-size:14px;flex:1}
+  /* room buttons: one swipeable row */
+  .rooms{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;padding-block:12px 4px}
+  .rooms::-webkit-scrollbar{display:none}
+  .rooms button{flex:none}
+  .intro h1{font-size:24px}
+  .intro p{font-size:15px}
+}
+@media (max-width:560px){
+  header.top .wrap{display:grid;grid-template-columns:1fr auto auto;grid-template-areas:"brand lang book" "links links links";column-gap:8px;row-gap:6px}
+  .navl{display:contents}
+  .brand{grid-area:brand}
+  .lang{grid-area:lang}
+  .navl .btn{grid-area:book;padding:8px 14px;font-size:14px}
+  .navl .links{grid-area:links;gap:20px;border-top:1px solid var(--line);padding-top:4px}
+  .navl a.t{font-size:14px}
+  .brand b{font-size:18px}
+}
 </style>
 
 <header class="top"><div class="wrap">
   <a class="brand" href="#house"><b>Pagliaroom</b></a>
-  <nav class="navl" aria-label="Pages"><a class="t" href="#house" data-page="house" data-i18n="navHouse">The house</a><a class="t" href="#project" data-page="project" data-i18n="navProject">Project</a><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="it" aria-pressed="false">IT</button></div><a class="btn" href="#book" data-i18n="book">Book a stay</a></nav>
+  <nav class="navl" aria-label="Pages"><span class="links"><a class="t" href="#house" data-page="house" data-i18n="navHouse">The house</a><a class="t" href="#project" data-page="project" data-i18n="navProject">Project</a></span><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="it" aria-pressed="false">IT</button></div><a class="btn" href="#book" data-i18n="book">Book a stay</a></nav>
 </div></header>
 
 <main id="house">
@@ -426,6 +464,8 @@ const EN={hint:"Drag to turn · scroll to zoom",seeInside:"See inside",streetVie
  err3d:"The 3D model could not start in this browser. Use the room buttons below to see the photos."};
 document.querySelectorAll("[data-i18n]").forEach(e=>{EN[e.dataset.i18n]=e.textContent;});
 document.querySelectorAll("[data-i18n-ph]").forEach(e=>{EN[e.dataset.i18nPh]=e.placeholder;});
+let TOUCH=false;try{TOUCH=matchMedia("(pointer: coarse)").matches;}catch(e){}
+if(TOUCH){EN.hint="Drag to turn · pinch to zoom";IT.hint="Trascina per ruotare · pizzica per lo zoom";}
 let LANG="en";try{const v=localStorage.getItem("pagliaroom-lang");LANG=v==="it"||v==="en"?v:((navigator.language||"").toLowerCase().startsWith("it")?"it":"en");}catch(e){LANG=(navigator.language||"").toLowerCase().startsWith("it")?"it":"en";}
 function tt(k,v){let t=(LANG==="it"?IT[k]:EN[k])??EN[k]??k;if(v)for(const x in v)t=t.replace("{"+x+"}",v[x]);return t;}
 function tr(o,f){return (LANG==="it"&&o[f+"_it"])?o[f+"_it"]:o[f];}
@@ -1000,7 +1040,8 @@ function initModel(){
     pinVis(camK);}
   camK="street";camera.position.set(...STREET.p);controls.target.set(...STREET.t);apply(STREET);controls.maxDistance=new THREE.Vector3(...STREET.p).distanceTo(new THREE.Vector3(...STREET.t));pinVis("street");controls.update();setMode(false);
   let on=true;
-  function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
+  function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;
+    const half=Math.atan(Math.tan(45*Math.PI/360)*1.5);camera.fov=camera.aspect<1.5?Math.min(72,2*Math.atan(Math.tan(half)/camera.aspect)*180/Math.PI):45;camera.updateProjectionMatrix();}
   new ResizeObserver(resize).observe(stage);resize();
   const clock=new THREE.Clock(),tmp=new THREE.Vector3();
   anim.forEach(f=>f(4));
