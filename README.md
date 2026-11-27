@@ -12,6 +12,7 @@ Visitors explore the house as an interactive 3D model, open real photos of each 
   - Day / Evening switch. Evening also turns the whole site dark, with fireflies and crickets.
   - Swallows with birdsong in the street view.
   - Record player in the living-room niche: plays the Pagliaroom clip, then a 3½-minute instrumental.
+- **Photo carousel**: 22 photos in assets/photos/gallery-01..22.jpg, auto-advancing every 4.5 s with a pause button; it pauses on hover, touch or when off-screen.
 - **Booking request**:
   - Date picker that only allows dates from today onwards.
   - Prepares an email to `info@pagliaroom.com` with the guest's details.

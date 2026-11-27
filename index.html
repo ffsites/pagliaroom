@@ -104,6 +104,23 @@ section.block{padding-block:72px 0}
 .feat li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1px;background:var(--accent)}
 .leadtxt p{margin:0}
 .amh{font-weight:400;font-size:22px;margin:0 0 16px;padding-top:28px;border-top:1px solid var(--line)}
+/* photo carousel */
+.carousel{position:relative;margin:0 0 56px}
+.car-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain}
+.car-track::-webkit-scrollbar{display:none}
+.car-track figure{margin:0;flex:none;height:min(62vh,600px);scroll-snap-align:start;border-radius:18px;overflow:hidden;background:var(--scene)}
+.car-track img{display:block;height:100%;width:auto;max-width:none}
+.car-nav{position:absolute;top:calc(min(62vh,600px)/2 - 22px);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#1D1D1B;box-shadow:0 2px 12px rgba(0,0,0,.18);cursor:pointer;display:grid;place-items:center;font-size:20px;line-height:1;transition:opacity .2s}
+.car-nav.prev{left:12px}.car-nav.next{right:12px}
+.car-nav:disabled{opacity:0;pointer-events:none}
+.car-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}
+.car-dots{display:flex;gap:6px;flex-wrap:wrap}
+.car-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--line);cursor:pointer}
+.car-dots button[aria-current="true"]{background:var(--ink)}
+.car-cnt{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.car-r{display:flex;align-items:center;gap:10px}
+.car-pp{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;padding:0}
+.car-pp svg{width:12px;height:12px;fill:currentColor}
 .amen{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 28px}
 .amen li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;font-size:14.5px;line-height:1.4}
 .amen svg{width:26px;height:26px;color:var(--ink)}
@@ -294,6 +311,10 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
   .rooms button{flex:none}
   .offer{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr;gap:12px}
+  .car-track figure{height:300px;border-radius:14px;max-width:calc(100vw - 48px)}
+  .car-track img{max-width:calc(100vw - 48px);object-fit:cover}
+  .car-nav{top:130px;width:40px;height:40px}
+  .carousel{margin-bottom:40px}
   .amen{grid-template-columns:1fr 1fr;gap:18px 14px}
   .amen li{font-size:13.5px;grid-template-columns:24px minmax(0,1fr);gap:9px;overflow-wrap:anywhere}
   .amen svg{width:22px;height:22px}
@@ -354,6 +375,12 @@ h3.sub{font-weight:400;font-size:22px;margin:56px 0 16px}
     <div class="lead">
       <h2 data-i18n="leadH">Original stone walls, a timber roof and light from above.</h2>
       <div class="leadtxt"><p data-i18n="leadP">Designed as a charming, functional open space, the property combines rustic simplicity with all the comforts you need. Enjoy a fully equipped kitchen for preparing meals with local ingredients, a cosy living corner and a private bathroom with a walk-in shower. A mezzanine hosts a welcoming double bed, while a small outdoor space invites you to slow down, soak up the natural light and enjoy the peaceful atmosphere of the village.</p></div>
+    </div>
+    <div class="carousel" id="car" role="region" aria-roledescription="carousel" aria-label="Photos of Pagliaroom" data-i18n-aria="carA">
+      <div class="car-track" id="car-track" tabindex="0"></div>
+      <button class="car-nav prev" id="car-p" type="button" aria-label="Previous photo" data-i18n-aria="prevPh">‹</button>
+      <button class="car-nav next" id="car-n" type="button" aria-label="Next photo" data-i18n-aria="nextPh">›</button>
+      <div class="car-foot"><div class="car-dots" id="car-dots"></div><div class="car-r"><span class="car-cnt" id="car-cnt"></span><button class="car-pp" id="car-pp" type="button"></button></div></div>
     </div>
     <h3 class="amh" data-i18n="amH">Amenities</h3>
     <ul class="amen"><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.8 12.4a9.3 9.3 0 0 1 12.4 0M9.1 15.8a4.6 4.6 0 0 1 5.8 0"/><circle cx="12" cy="19.2" r=".9" fill="currentColor"/></svg><span data-i18n="a1">Wi-Fi</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v5.5A4.5 4.5 0 0 1 15.5 20h-7A4.5 4.5 0 0 1 4 15.5zM2 11h2M20 11h2M9 6.5c0-1.2 1-1.4 1-2.6M13 6.5c0-1.2 1-1.4 1-2.6"/></svg><span data-i18n="a2">Fully equipped kitchen (stove, fridge, oven, utensils)</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19v-9M3 15h18v4M21 15v-2.5A2.5 2.5 0 0 0 18.5 10H11v5"/><circle cx="7" cy="12.2" r="1.7"/></svg><span data-i18n="a3">Bed linen and towels</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h5v11H5zM6.5 9V6.5h2V9M7.5 4.5v2"/><path d="M14 6.5h3.5a3 3 0 0 1 0 6H14zM14 9.5h-1.5M15.5 12.5l-1 7h2.5l.8-6.6"/></svg><span data-i18n="a8">Shower gel and hairdryer</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5L12 6.5l2.5-2M9.5 19.5l2.5-2 2.5 2"/></svg><span data-i18n="a4">Air Conditioner/Heating</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 4l9 6.5M5 9v11h14V9M9.5 20v-6h5v6M9.5 17h5"/><path d="M10 8.5h4" /></svg><span data-i18n="a5">Natural light with a skywindow and traditional stable door</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="3.5"/><path d="M10 16.5V8h3.2a2.6 2.6 0 0 1 0 5.2H10"/></svg><span data-i18n="a6">Free parking on the street</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10h17l-1.6 9.2a1.5 1.5 0 0 1-1.5 1.3H6.6a1.5 1.5 0 0 1-1.5-1.3zM8 10l3-6M16 10l-3-6M9 13.5v3.5M12 13.5v3.5M15 13.5v3.5"/></svg><span data-i18n="a7">Local welcome products (on request)</span></li></ul>
@@ -505,7 +532,7 @@ const IT={navHouse:"La casa",navProject:"Il progetto",navYours:"La tua Pagliaroo
  leadP:"Pensata come un open space accogliente e funzionale, la casa unisce semplicità rustica e tutti i comfort necessari. Una cucina completamente attrezzata per preparare piatti con ingredienti locali, un piccolo angolo living e un bagno privato con doccia walk-in. Il soppalco ospita un accogliente letto matrimoniale, mentre un piccolo spazio esterno invita a rallentare, godersi la luce naturale e l’atmosfera tranquilla del borgo.",l1:"Cucina completamente attrezzata per preparare piatti semplici con ingredienti locali",l2:"Piccolo angolo living con sedute e dettagli dal design essenziale",l3:"Bagno privato con finiture curate e doccia walk-in",l4:"Sul soppalco, un’accogliente zona notte con letto matrimoniale",l5:"Piccolo spazio esterno per rilassarsi e godersi il borgo e la luce naturale",amH:"Servizi",a1:"Wi-Fi",a2:"Cucina completamente attrezzata (piano cottura, frigorifero, forno, utensili)",a3:"Biancheria da letto e asciugamani",a8:"Bagnoschiuma e asciugacapelli",a4:"Aria condizionata/riscaldamento",a5:"Luce naturale dal lucernario e dalla tradizionale porta a due ante orizzontali",a6:"Parcheggio gratuito in strada",a7:"Prodotti locali di benvenuto (su richiesta)",igA:"Pagliaroom su Instagram",seeProj:"Vedi il progetto",
  f1:"ospiti, un letto matrimoniale",f2:"piano terra, più un soppalco",f3:"bagno con doccia",f4b:"Cucina",f4:"lavello, piano cottura e isola-tavolo",
  reqH:"Richiedi le tue date",reqP:"L'host conferma disponibilità e prezzo prima di qualsiasi prenotazione.",
- checkin:"Arrivo",soundOn:"Audio attivo",entrance:"Ingresso",skylight:"Lucernario",roof:"Sul tetto",ySubj:"La tua Pagliaroom: una piccola casa in Sicilia",
+ checkin:"Arrivo",soundOn:"Audio attivo",carA:"Foto di Pagliaroom",prevPh:"Foto precedente",nextPh:"Foto successiva",pausePh:"Metti in pausa",playPh:"Avvia la presentazione",entrance:"Ingresso",skylight:"Lucernario",roof:"Sul tetto",ySubj:"La tua Pagliaroom: una piccola casa in Sicilia",
  cr1:"Progetto e ristrutturazione con la guida e il supporto dello",cr2:"Ideazione della cucina della interior designer",
  yH:"La tua Pagliaroom",yP:"Sogni una piccola casa tutta tua in Sicilia? Ci siamo passati: trovare un vecchio edificio in pietra, farlo rilevare, progettare e ristrutturare. Possiamo guidarti in ogni passo, oppure gestire il progetto per te.",
  o1h:"Guida",o1p:"Per chi vuole fare da sé, con qualcuno al proprio fianco. Condividiamo ciò che abbiamo imparato: da dove iniziare, quali domande fare, a chi rivolgersi e a cosa fare attenzione lungo il percorso.",
@@ -530,7 +557,7 @@ const IT={navHouse:"La casa",navProject:"Il progetto",navYours:"La tua Pagliaroo
  tour:"Tour",stopTour:"Ferma il tour",playTour:"Rivedi il tour",outside:"Esterno",inside:"Interno",err3d:"Il modello 3D non si avvia in questo browser. Usa i pulsanti delle stanze qui sotto per vedere le foto."};
 const EN={hint:"Drag to turn · scroll to zoom",seeInside:"See inside",streetView:"← Street view",photoN:"Open photo {i} of {n}",photo:"photo",openFull:"Open {t} full screen",
  show:"Show {n}",inArea:"in this area",east:"east",fromP:"from Pagliaroom",pick:"Tap a place on the map, or pick one:",allPlaces:"← All places",gmaps:"Photos and directions on Google Maps ↗",
- night:"night",nights:"nights",soundOn:"Sound on",entrance:"Entrance",skylight:"Skylight",roof:"On the roof",ySubj:"Your Pagliaroom: a little house in Sicily",startTour:"Take the tour",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
+ night:"night",nights:"nights",soundOn:"Sound on",carA:"Photos of Pagliaroom",prevPh:"Previous photo",nextPh:"Next photo",pausePh:"Pause slideshow",playPh:"Play slideshow",entrance:"Entrance",skylight:"Skylight",roof:"On the roof",ySubj:"Your Pagliaroom: a little house in Sicily",startTour:"Take the tour",igA:"Pagliaroom on Instagram",seeProj:"See the project",sendMail:"Send by email",mailAlt:"If your email app doesn’t open, copy the request and send it to {c}.",nextPhoto:"Photo {i} of {n}. Show the next photo",soundOff:"Sound off",playRec:"Play the record",stopRec:"Stop the record",addDate:"Add date",prevM:"Previous month",nextM:"Next month",selDates:"Select your dates",priceConf:"Price on confirmation",perNight:"/ night",
  e1:"Choose a check-in and a check-out date.",e2:"Check-out must be after check-in.",e3:"Add your name.",e4:"Add an email or phone number so the host can reply.",
  rq:"Booking request",rqDates:"Dates",to:"to",rqGuests:"Guests",rqName:"Name",rqContact:"Contact",rqMsg:"Message",
  ready:"Your request is ready. Copy it and send it to the host. Nothing is booked until the host confirms.",readyTo:"Your request is ready. Send it by email to {c}. Nothing is booked until the host confirms.",
@@ -671,6 +698,35 @@ function showPoi(id){const box=$("poi");poiId=id;const p=POIS.find(q=>q.id===id)
   box.querySelector("h4").textContent=p.name;box.querySelector(".back2").textContent=tt("allPlaces");box.querySelector(".dist").textContent=`${fmtD(p.m)} ${tt("fromP")}${p.road?" · "+tr(p,"road"):""}`;
   box.querySelector("p").textContent=tr(p,"d");box.querySelector("a").href=p.g;box.querySelector("a").textContent=tt("gmaps");box.querySelector(".back2").onclick=()=>showPoi(null);}
 showPoi(null);
+/* ---- photo carousel ---- */
+const GAL=[{"src": "assets/photos/gallery-01.jpg", "en": "The stone facade with open shutters, the bistro table and the stable door", "it": "La facciata in pietra con le persiane aperte, il tavolino e la porta"}, {"src": "assets/photos/gallery-02.jpg", "en": "The front door and the iron ring set in the stone wall", "it": "La porta d’ingresso e l’anello di ferro nel muro in pietra"}, {"src": "assets/photos/gallery-03.jpg", "en": "The iron house number on the stone", "it": "Il numero civico in ferro sulla pietra"}, {"src": "assets/photos/gallery-04.jpg", "en": "A block of local stone as the first step of the mint-green spiral stair", "it": "Un blocco di pietra locale come primo gradino della scala a chiocciola"}, {"src": "assets/photos/gallery-05.jpg", "en": "The oak kitchen island with its hob and two steel stools", "it": "L’isola in rovere con il piano cottura e due sgabelli in acciaio"}, {"src": "assets/photos/gallery-06.jpg", "en": "Looking in from the front door: the spiral stair and the kitchen", "it": "Dalla porta d’ingresso: la scala a chiocciola e la cucina"}, {"src": "assets/photos/gallery-07.jpg", "en": "The kitchen, the stone wall and the spiral stair", "it": "La cucina, il muro in pietra e la scala a chiocciola"}, {"src": "assets/photos/gallery-08.jpg", "en": "The spiral stair, dried grasses and the inner wooden door", "it": "La scala a chiocciola, le erbe secche e la porta interna in legno"}, {"src": "assets/photos/gallery-09.jpg", "en": "The timber roof and the skylight above the double-height space", "it": "Il tetto in legno e il lucernario sopra la doppia altezza"}, {"src": "assets/photos/gallery-10.jpg", "en": "The stone facade at dusk, lit from within", "it": "La facciata in pietra al tramonto, illuminata dall’interno"}, {"src": "assets/photos/gallery-11.jpg", "en": "The kitchen corner: sink, oak shelf and hanging glasses", "it": "L’angolo cucina: lavello, mensola in legno e calici appesi"}, {"src": "assets/photos/gallery-12.jpg", "en": "The bathroom: backlit oval mirror and fluted glass shower", "it": "Il bagno: specchio ovale retroilluminato e doccia in vetro cannettato"}, {"src": "assets/photos/gallery-13.jpg", "en": "The spiral stair seen from the loft", "it": "La scala a chiocciola vista dal soppalco"}, {"src": "assets/photos/gallery-14.jpg", "en": "The sliding bathroom door and the sofa against the stone wall", "it": "La porta scorrevole del bagno e il divano contro il muro in pietra"}, {"src": "assets/photos/gallery-15.jpg", "en": "The kitchen seen through the front door at dusk", "it": "La cucina vista dalla porta d’ingresso al tramonto"}, {"src": "assets/photos/gallery-16.jpg", "en": "The bathroom basin, mirror and shower", "it": "Il lavabo, lo specchio e la doccia del bagno"}, {"src": "assets/photos/gallery-17.jpg", "en": "The kitchen under the loft and the spiral stair", "it": "La cucina sotto il soppalco e la scala a chiocciola"}, {"src": "assets/photos/gallery-18.jpg", "en": "An oak drawer of the island, with lemon and parsley", "it": "Un cassetto in legno dell’isola, con limone e prezzemolo"}, {"src": "assets/photos/gallery-19.jpg", "en": "The island, the stone niche with shelves and the kitchen counter", "it": "L’isola, la nicchia in pietra con le mensole e il piano cucina"}, {"src": "assets/photos/gallery-20.jpg", "en": "The bathroom window from the street at dusk", "it": "La finestra del bagno dalla strada al tramonto"}, {"src": "assets/photos/gallery-21.jpg", "en": "A bottle and two glasses on the island", "it": "Una bottiglia e due calici sull’isola"}, {"src": "assets/photos/gallery-22.jpg", "en": "The kitchen island and the spiral stair", "it": "L’isola della cucina e la scala a chiocciola"}];
+(function(){const tr=$("car-track"),dots=$("car-dots"),n=GAL.length;
+  GAL.forEach((g,i)=>{const f=document.createElement("figure"),im=document.createElement("img");im.src=g.src;im.loading=i<2?"eager":"lazy";im.decoding="async";im.dataset.i=i;f.appendChild(im);tr.appendChild(f);
+    const d=document.createElement("button");d.type="button";d.onclick=()=>go(i);dots.appendChild(d);});
+  const figs=[...tr.children];
+  function idx(){const x=tr.scrollLeft;let best=0,bd=1e9;figs.forEach((f,i)=>{const d=Math.abs(f.offsetLeft-tr.offsetLeft-x);if(d<bd){bd=d;best=i;}});
+    if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)best=Math.max(best,n-1);return best;}
+  function go(i){i=Math.max(0,Math.min(n-1,i));tr.scrollTo({left:figs[i].offsetLeft-tr.offsetLeft,behavior:still?"auto":"smooth"});}
+  function upd(){const i=idx();$("car-cnt").textContent=`${i+1} / ${n}`;[...dots.children].forEach((d,k)=>{d.setAttribute("aria-current",k===i);d.setAttribute("aria-label",tt("photoN",{i:k+1,n}));});
+    $("car-p").disabled=tr.scrollLeft<4;$("car-n").disabled=tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4;}
+  $("car-p").onclick=()=>go(idx()-1);$("car-n").onclick=()=>go(idx()+1);
+  tr.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();go(idx()+1);}if(e.key==="ArrowLeft"){e.preventDefault();go(idx()-1);}});
+  let t;tr.addEventListener("scroll",()=>{clearTimeout(t);t=setTimeout(upd,60);},{passive:true});addEventListener("resize",upd);
+  tr.querySelectorAll("img").forEach(im=>im.addEventListener("load",upd));
+  /* autoplay: every 4.5 s, loops; pauses on hover, focus, touch, hidden tab, off-screen; off for reduced motion */
+  const PLAY='<svg viewBox="0 0 12 12"><path d="M3 1.5v9l7-4.5z"/></svg>',PAUSE='<svg viewBox="0 0 12 12"><rect x="2" y="1.5" width="3" height="9"/><rect x="7" y="1.5" width="3" height="9"/></svg>';
+  let on=!matchMedia("(prefers-reduced-motion: reduce)").matches,hold=0,vis=true,timer=null;const car=$("car"),pp=$("car-pp");
+  function ppUI(){pp.innerHTML=on?PAUSE:PLAY;pp.setAttribute("aria-label",tt(on?"pausePh":"playPh"));}
+  function tick(){if(!on||hold||!vis||document.hidden)return;const i=idx();(i>=n-1||tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)?go(0):go(i+1);}
+  function arm(){clearInterval(timer);timer=setInterval(tick,4500);}
+  pp.onclick=()=>{on=!on;ppUI();arm();};
+  car.addEventListener("mouseenter",()=>hold|=1);car.addEventListener("mouseleave",()=>{hold&=~1;arm();});
+  car.addEventListener("focusin",()=>hold|=2);car.addEventListener("focusout",()=>{hold&=~2;arm();});
+  let tu;tr.addEventListener("pointerdown",()=>{hold|=4;clearTimeout(tu);});tr.addEventListener("touchstart",()=>{hold|=4;clearTimeout(tu);},{passive:true});
+  const rel=()=>{clearTimeout(tu);tu=setTimeout(()=>{hold&=~4;arm();},6000);};tr.addEventListener("pointerup",rel);tr.addEventListener("touchend",rel);
+  if("IntersectionObserver"in window)new IntersectionObserver(es=>{vis=es[0].isIntersecting;},{threshold:.3}).observe(car);
+  ppUI();arm();
+  window.carLang=()=>{ppUI();figs.forEach((f,i)=>{f.firstChild.alt=LANG==="it"?GAL[i].it:GAL[i].en;});upd();};carLang();})();
 /* ---- Your Pagliaroom: enquiry by email ---- */
 $("yreq").addEventListener("submit",e=>{e.preventDefault();const n=$("yname").value.trim(),c=$("ycontact").value.trim(),err=$("yerr");err.hidden=true;
   if(!n||!c){err.textContent=!n?tt("e3"):tt("e4");err.hidden=false;return;}
@@ -1209,7 +1265,7 @@ function applyLang(l){LANG=l;try{localStorage.setItem("pagliaroom-lang",l);}catc
   document.querySelectorAll("[data-i18n-ph]").forEach(e=>{e.placeholder=tt(e.dataset.i18nPh);});
   document.querySelectorAll("[data-i18n-aria]").forEach(e=>{e.setAttribute("aria-label",tt(e.dataset.i18nAria));});
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
-  buildRooms();buildSheets();drawMap();showPoi(poiId);upd();
+  buildRooms();buildSheets();drawMap();showPoi(poiId);upd();if(window.carLang)carLang();
   if(cur)openArea(cur.id,true);else if(tour.on)tourCaption();else{$("hint").textContent=tt("hint");setBase(base);}
   if(model&&model.relabel)model.relabel();tourChip();
   if(!$("done").hidden)$("req").requestSubmit();}
